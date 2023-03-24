@@ -23,11 +23,11 @@
                 <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
                     Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
                 </p>
-                <img src="mail.png" alt="mail image">
+                <img src="img/mail.png" alt="mail image">
                 <p>info.megarocket@megarocket.com</p>
-                <img src="contact-tel.png" alt="telephone image ">
+                <img src="img/contact-tel.png" alt="telephone image ">
                 <p>54-341-xxxxxxxxx</p>
-                <img src="house.png" alt="house image">
+                <img src="img/house.png" alt="house image">
                 <p>AAA xxx, Rosario, Argentina, CP 2000</p>
             </div>
         </nav>
@@ -42,7 +42,7 @@
                 faucibus orci luctus et ultrices posuere cubilia curae; Phasellus dignissim imperdiet
             </p>
             <button>Learn more</button>
-            <img src="people-working-out.png" atl="people working out image">
+            <img src="img/people-working-out.png" atl="people working out image">
         </main>
         <section>
             <h3>App Features</h3>
@@ -53,7 +53,7 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
-                <img src="vector-appointent.jpg" alt="appointent note image">
+                <img src="img/vector-appointent.jpg" alt="appointent note image">
             </article>
             <article>
                 <h3>Membership management</h3>
@@ -62,7 +62,7 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
-                <img src="vector-membership.png" alt="membership managest image">
+                <img src="img/vector-membership.png" alt="membership managest image">
             </article>
             <article>
                 <h3>Schedule and timetables</h3>
@@ -71,7 +71,7 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
-                <img src="vector-calendar.png" alt="calendar image">
+                <img src="img/vector-calendar.png" alt="calendar image">
             </article>
             <article>
                 <h3>Contact and suggestions</h3>
@@ -80,9 +80,31 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
-                <img src="vector-contact.png" alt="contact image">
+                <img src="img/vector-contact.png" alt="contact image">
             </article>
         </section>
-
+        <article>
+            <div>
+                <form action="url" method="post">
+                    <h3>Contact</h3>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Write here">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Write here">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Write here">
+                    <label for="contact-reason">Contact Reason</label>
+                    <select id="contact-reason" name="contact-reason" form="contact-reason">
+                        <option value="membership">I want to know about membership and cost</option>
+                        <option value="question-suggestion">I want to make a question or suggestion</option>
+                        <option value="contact">I want to make a contact</option>
+                    </select>
+                    <label for="message">Message</label>
+                    <textarea placeholder="Write here"></textarea>
+                    <input type="submit" value="Send It">
+                    <input type="reset" value="Clear">
+                </form>
+            </div>
+        </article>
     </body>
 </html>
