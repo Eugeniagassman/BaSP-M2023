@@ -1,5 +1,3 @@
-# BaSP-M2023
-# BaSP-M2023
 # Mega Rocket SA
 
 Mega Rocket SA is a web system that facilitates the management of the schedule grid.
