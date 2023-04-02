@@ -103,7 +103,6 @@ main img{
 .features p{
     font-size: 13px;
 }
-
 .form label{ 
     font-weight: 500;
     position:relative;
@@ -117,6 +116,27 @@ main img{
     border:1px rgba(55, 56, 103, 100%) solid;
     padding:5px;
 } 
-
+#history{
+    border-top:2px rgba(221,225,227) solid;
+    margin-top:25px;
+    height: 1000px;
+}
+#history img{
+    width: 590px;
+}
+#txt-history{
+    border-left: 3px rgb(55,56,103,100%) solid;
+    padding-left:15px;
+    margin-bottom: 38px;
+}
+#origin{
+    display:inline-block;
+    width:580px;
+    padding-right:40px;
+}
+#mission{
+    display:inline-block;
+    width:580px;
+}
 
 
