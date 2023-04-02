@@ -74,3 +74,12 @@ main img{
     padding:15px;
     font-weight: 500;
 }
+#features{
+    width:130px;
+    border-bottom:5px rgb(170, 206, 155) solid;
+    padding-bottom:15px;
+    margin:70px;
+}
+.sub-title{
+    font-size:25px;
+}
