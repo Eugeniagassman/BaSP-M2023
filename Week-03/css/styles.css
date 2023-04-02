@@ -119,7 +119,12 @@ main img{
 #history{
     border-top:2px rgba(221,225,227) solid;
     margin-top:25px;
-    height: 1000px;
+    height: 750px;
+}
+#origin img {
+    border-top: 2px rgb(55,56,103,100%) solid;
+    margin-top:10px;
+    padding-top:31px;
 }
 #history img{
     width: 590px;
@@ -137,6 +142,11 @@ main img{
 #mission{
     display:inline-block;
     width:580px;
+}
+#mission h3{
+    border-bottom: 2px rgb(55,56,103,100%) solid;
+    margin-bottom:10px;
+    padding-bottom:31px;
 }
 
 
