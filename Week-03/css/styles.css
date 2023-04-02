@@ -74,14 +74,19 @@ main img{
     padding:15px;
     font-weight: 500;
 }
+.sub-title{
+    font-size:25px;
+}
 #ttl-features{
     width:130px;
     border-bottom:5px rgb(170, 206, 155) solid;
     padding-bottom:15px;
     margin-bottom: 45px;
 }
-.sub-title{
-    font-size:25px;
+#app-features{
+    margin-top:25px;
+    border-top:2px rgba(221,225,227) solid;
+    border-bottom: 2px rgba(221,225,227) solid;
 }
 .features{
     display:inline-block;
