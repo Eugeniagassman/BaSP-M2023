@@ -104,3 +104,19 @@ main img{
     font-size: 13px;
 }
 
+.form label{ 
+    font-weight: 500;
+    position:relative;
+    /* padding:10px; */
+    display:inline-block; 
+}
+.form input{
+    width:310px;
+    /* display:block */
+    border-radius: 4px;
+    border:1px rgba(55, 56, 103, 100%) solid;
+    padding:5px;
+} 
+
+
+
