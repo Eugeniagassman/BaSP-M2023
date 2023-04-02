@@ -2,5 +2,35 @@
     font-family: 'Roboto', sans-serif;
 }
 header{
-    
+    color:rgba(55, 56, 103, 0.4);
+    margin: 40px;
+    font-size:12px;
+}
+#header-social{
+    float:right;
+    letter-spacing: 15px;
+}
+header h1{
+    display:inline;
+}
+header img{
+    width:15px;
+}
+a{
+    text-decoration: none;
+}
+#menu{
+    float:left;
+    padding-right:15px;
+}
+header #line-black{
+    width:800px;
+    height: 2px;
+    background-color: rgba(221,225,227);
+    margin-bottom: 20px;
+}
+header #line-color{
+    width:800px;
+    background-color: rgb(170, 206, 155);
+    height: 5px;
 }
