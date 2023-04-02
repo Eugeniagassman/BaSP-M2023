@@ -1,6 +1,12 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+body{
+    margin:20px 70px;
+}
+/* .mrg-content{
+    margin:70px;
+} */
 header{
     color:rgba(55, 56, 103, 0.4);
     font-size:12px;
@@ -24,10 +30,9 @@ a{
     padding-right:15px;
 }
 header #line-container{
-    border-top: 2px rgba(221,225,227) solid;
+    /* border-top: 2px rgba(221,225,227) solid; */
     border-bottom:5px rgb(170, 206, 155) solid;
     padding: 10px;
-    margin: 30px;
 }
 nav{
     display:none;
@@ -35,8 +40,8 @@ nav{
 main{
     background-color: rgba(170,206,155,10%);
     border-top:5px rgb(170, 206, 155) solid;
-    margin-left:70px;
-    margin-right:70px;
+    /* margin-left:70px;
+    margin-right:70px; */
     padding-top: 20px;
     height: 580px;
     padding-left: 5px;
@@ -78,7 +83,6 @@ main img{
     width:130px;
     border-bottom:5px rgb(170, 206, 155) solid;
     padding-bottom:15px;
-    margin:70px;
 }
 .sub-title{
     font-size:25px;
