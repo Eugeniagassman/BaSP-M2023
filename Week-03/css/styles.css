@@ -93,7 +93,7 @@ main img{
     width:500px;
     padding-right:100px;
 }
-.features-img, .activities-img{
+.features-img{
     width: 110px;
     float: left;
     padding-right: 35px;
@@ -146,10 +146,15 @@ main img{
     margin-bottom:10px;
     padding-bottom:31px;
 }
-/* .activities{
-    display:inline-block;
-    width:500px;
-    padding-right:100px;
-} */
+.activities{
+    font-weight: 500;
+}
+.activities-img{
+    width: 147px;
+    float: left;
+    padding-right: 74px;
+    padding-bottom: 42px;
+    margin-bottom: 65px;
+}
 
 
