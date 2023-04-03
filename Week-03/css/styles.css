@@ -103,23 +103,50 @@ main img{
 .features p{
     font-size: 13px;
 }
-.form label{ 
+.form{
     font-weight: 500;
-    position:relative;
-    display:inline-block; 
 }
-.form input{
-    width:310px;
-    border-radius: 4px;
+form input{
     border:1px rgba(55, 56, 103, 100%) solid;
-    padding:5px;
-} 
+    border-radius: 4px;
+}
+.form-inline{
+    display:inline;
+    float:left;
+}
+.form-inline input{
+    width: 378px;
+    padding: 5px;
+    margin-right: 12px;
+    margin-bottom: 30px;
+}
+.form-inlne label{
+    margin-bottom:5px;
+}
+.form-block{
+    display:block;
+    margin-bottom: 5px;
+}
+.form-block select{
+    display:block;
+    border:1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 4px;
+    width: 611px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+#textarea{
+    width:1185px;
+    height: 250px;
+    border:1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 4px;
+}
 #history{
     border-top:2px rgba(221,225,227) solid;
     margin-top:25px;
     height: 750px;
 }
-#origin img {
+#origin img{
     border-top: 2px rgb(55,56,103,100%) solid;
     margin-top:10px;
     padding-top:31px;

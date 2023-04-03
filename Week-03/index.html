@@ -168,36 +168,46 @@ rel="stylesheet">
                 <h3>
                     Contact
                 </h3>
-                <label for="name">
-                    Name
-                </label>
-                <input type="text" id="name" name="name" placeholder="Write here">
-                <label for="last-name">
-                    Last Name
-                </label>
-                <input type="text" id="last-name" name="last-name" placeholder="Write here">
-                <label for="email">
-                    Email
-                </label>
-                <input type="email" id="email" name="email" placeholder="Write here">
-                <label for="contact-reason">
-                    Contact Reason
-                </label>
-                <select id="contact-reason" name="contact-reason">
-                    <option value="membership">
-                        I want to know about membership and cost
-                    </option>
-                    <option value="question-suggestion">
-                        I want to make a question or suggestion
-                    </option>
-                    <option value="contact">
-                        I want to make a contact
-                    </option>
-                </select>
-                <label for="message">
-                    Message
-                </label>
-                <textarea placeholder="Write here"></textarea>
+                <div class="form-inline">
+                    <label id="label-name" class="form-block" for="name">
+                        Name
+                    </label>
+                    <input type="text" id="input-name" name="name" placeholder="Write here">
+                </div>
+                <div class="form-inline">
+                    <label id="last-name" class="form-block" for="last-name">
+                        Last Name
+                    </label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Write here">
+                </div>
+                <div class="form-inline">
+                    <label class="form-block"for="email">
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Write here">
+                </div>
+                <div class="form-block">
+                    <label class="form-block"for="contact-reason">
+                        Contact Reason
+                    </label>
+                    <select id="contact-reason" name="contact-reason">
+                        <option value="membership">
+                            I want to know about membership and cost
+                        </option>
+                        <option value="question-suggestion">
+                            I want to make a question or suggestion
+                        </option>
+                        <option value="contact">
+                            I want to make a contact
+                        </option>
+                    </select>
+                </div>
+                <div class="form-block">
+                    <label class="form-block"for="message">
+                        Message
+                    </label>
+                    <textarea id="textarea" placeholder="Write here"></textarea>
+                </div>
                 <input type="submit" value="Send It">
                 <input type="reset" value="Clear">
             </form>
