@@ -156,5 +156,24 @@ main img{
     padding-bottom: 42px;
     margin-bottom: 65px;
 }
+#pagination{
+    display: inline-block;
+    margin-left:300px;
+}
+#pagination li{
+    text-decoration: none;
+    list-style-type: none;
+    float:left;
+    padding:10px;
+}
+#pagination a:link, #pagination a:visited, #pagination a:hover, #pagination a:active{
+    font-size:13px;
+    color: rgba(170,206,155);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border:1px rgba(170,206,155) solid;
+    border-radius: 6px;
+}
 
 
