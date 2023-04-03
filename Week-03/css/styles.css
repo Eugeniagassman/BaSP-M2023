@@ -175,5 +175,17 @@ main img{
     border:1px rgba(170,206,155) solid;
     border-radius: 6px;
 }
+#footer{
+    border-top:5px rgb(170, 206, 155) solid;
+    margin-top:50px;
+    padding-top:25px;
+    text-align: center;
+    font-size: 13px;
+}
+#footer img{
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom:20px;
+}
 
 
