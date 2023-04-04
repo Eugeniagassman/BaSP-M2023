@@ -42,6 +42,18 @@ You can directly download the code from this repository,
 *  Enter with email and password.
 *  Manages the admin, being able to add, modify or delete it if necessary.
 
+## Week 01
+we made a Figma project. We did an screenflow about this application, with functionality of each section
+
+## Week 02
+In this week we transfer the structure of the application, without styles. Only html language
+
+## Week 03
+After the second week we started to add styles. We link css and an reset file. This time the style was not responsive design
+
+## Authors
+- Gassman Eugenia
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
