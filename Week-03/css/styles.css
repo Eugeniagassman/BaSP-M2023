@@ -11,25 +11,26 @@ header{
 #header-social{
     float:right;
     letter-spacing: 15px;
+    height: 25px;
 }
-header h1{
+.header{
+    margin-bottom: 17px;
+}
+#header-social img{
+    height: 26px;
+}
+header #line-container{
+    border-bottom:5px rgb(170, 206, 155) solid;
+}
+header h2{
     display:inline;
-}
-header img{
-    width:20px;
 }
 a{
     text-decoration: none;
-    margin-bottom:5px;
-}
-#menu{
-    float:left;
-    padding-right:15px;
-}
-header #line-container{
-    border-top: 2px rgba(221,225,227) solid; 
-    border-bottom:5px rgb(170, 206, 155) solid;
-    padding: 10px;
+} 
+#menu-logo{
+    display: block;
+    margin-bottom:20px;
 }
 nav{
     display:none;
