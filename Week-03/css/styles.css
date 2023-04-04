@@ -97,11 +97,6 @@ main #main-txt{
     margin-top:25px;
     border-top:2px rgba(221,225,227) solid;
 }
-#origin img{
-    margin-top:10px;
-    padding-top:31px;
-    border-top: 2px rgb(55,56,103,100%) solid;
-}
 #history img{
     width: 590px;
 }
@@ -115,6 +110,11 @@ main #main-txt{
     width:580px;
     padding-right:40px;
 }
+#origin img{
+    margin-top:10px;
+    padding-top:31px;
+    border-top: 2px rgb(55,56,103,100%) solid;
+}
 #mission{
     display:inline-block;
     width:580px;
@@ -123,6 +123,10 @@ main #main-txt{
     margin-bottom:10px;
     padding-bottom:31px;
     border-bottom: 2px rgb(55,56,103,100%) solid;
+}
+#activities{
+    border-top:2px rgba(221,225,227) solid;
+    padding-top: 65px;
 }
 #pagination{
     display: inline-block;
