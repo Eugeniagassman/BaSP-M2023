@@ -42,16 +42,12 @@ form input{
     border:1px rgba(55, 56, 103, 100%) solid;
     border-radius: 4px;
 }
-header #line-container{
-    border-bottom:5px rgb(170, 206, 155) solid;
-}
 main #main-txt{
     float:left;
     width:500px;
 }
 #header-social{
     float:right;
-    height: 25px;
     letter-spacing: 15px;
 }
 #header-social img{
