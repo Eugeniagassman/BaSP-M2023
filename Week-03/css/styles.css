@@ -72,10 +72,28 @@ main #main-txt{
     border-top:2px rgba(221,225,227) solid;
     border-bottom: 2px rgba(221,225,227) solid;
 }
+#input-clear{
+    width: 133px;
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 3px;
+    font-weight: 500;
+}
+#input-send{
+    width: 133px;
+    padding: 9px;
+    margin-left:65px;
+    background-color:rgb(170,206,155);
+    border:none;
+    border-radius: 3px;
+    font-weight: 500;
+}
 #textarea{
     width:1185px;
     height: 250px;
-    border:1px rgba(55, 56, 103, 100%) solid;
+    padding:5px;
+    border:1px rgba(224,224,224) solid;
     border-radius: 4px;
 }
 #history{
@@ -112,7 +130,7 @@ main #main-txt{
 }
 #pagination{
     display: inline-block;
-    margin-left:300px;
+    margin-left:340px;
 }
 #pagination li{
     float:left;
@@ -201,23 +219,6 @@ main #main-txt{
     margin-bottom: 30px;
     border:1px rgba(55, 56, 103, 100%) solid;
     border-radius: 4px;
-}
-#input-clear{
-    width: 133px;
-    padding: 8px;
-    background-color: rgb(255, 255, 255);
-    border: 1px rgba(55, 56, 103, 100%) solid;
-    border-radius: 3px;
-    font-weight: 500;
-}
-#input-send{
-    width: 133px;
-    padding: 9px;
-    margin-left:65px;
-    background-color:rgb(170,206,155);
-    border:none;
-    border-radius: 3px;
-    font-weight: 500;
 }
 .activities{
     font-weight: 500;
