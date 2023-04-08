@@ -1,0 +1,33 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 10px;
+    color:rgba(55, 56, 103, 0.4);
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin:10px;
+}
+header #menu img{
+    height: 1.5em;
+}
+.header h2{
+    font-size: 0.7em;
+}
+.header a{
+    letter-spacing: 0.5em;
+}
+.header img{
+    height: 1em;
+}
+a{
+    text-decoration: none;
+}
