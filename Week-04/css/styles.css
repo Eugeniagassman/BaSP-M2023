@@ -164,3 +164,27 @@ form select{
     border-radius: 5px;
     font-weight: 500;
 }
+#history{
+    width: 95%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+    border-top: 2px rgba(221,225,227) solid;
+    border-bottom: 2px rgba(221,225,227) solid;
+}
+#txt-history{
+    border-left: 3px rgb(55,56,103,100%) solid;
+}
+#history-title{
+    font-size: 1.5em;
+}
+#history img{
+    width: 100%;
+    max-width: 371px;
+}
+#history p{
+    width:95%;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    padding-left: 3%;
+}
