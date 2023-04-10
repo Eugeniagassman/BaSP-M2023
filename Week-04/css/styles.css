@@ -183,8 +183,34 @@ form select{
     max-width: 371px;
 }
 #history p{
-    width:95%;
+    width: 95%;
     font-size: 0.9em;
     line-height: 1.2em;
     padding-left: 3%;
+}
+#activities{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top:5%;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+#activities h3{
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.activities-img{
+    width: 30%;
+    max-width: 111px;
+}
+.activities-list{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 95%;
 }
