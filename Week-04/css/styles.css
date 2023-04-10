@@ -15,10 +15,10 @@ header{
 }
 .header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin:10px;
+    width: 95%;
+    margin-left: 3%;
 }
 header #menu img{
     height: 1.5em;
@@ -213,4 +213,33 @@ form select{
    flex-direction: column;
    align-items: center;
    width: 95%;
+}
+#pagination{
+    width: 95%;
+}
+#pagination ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 3%;
+}
+#pagination a:link, #pagination:hover{
+    padding: 10px;
+    border:1px rgba(170,206,155) solid;
+    border-radius: 6px;
+    font-size:13px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(170,206,155);
+}
+footer img{
+    padding-left: 32px;
+}
+#footer{
+    width:95%;
+    border-top:5px rgb(170, 206, 155) solid;
+    padding-top: 3%;
+    text-align: center;
+    font-size: 0.8em;
 }
