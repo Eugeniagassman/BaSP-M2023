@@ -1,9 +1,6 @@
 body{
-    font-family: 'Roboto', sans-serif;
     width:95%;
-    /* width: 90%; */
-    /* margin-left:3%;
-    margin-right: 3%; */
+    font-family: 'Roboto', sans-serif;
 }
 header{
     display: flex;
@@ -36,24 +33,22 @@ a{
     text-decoration: none;
 }
 nav{
-    display:none;
-    width:30%;
+    display: none;
+    width: 30%;
     padding: 3%;
 }
 main{
-    margin-left:3%;
+    margin-left: 3%;
     margin-right: 3%;
-    /* width:100%; */
     background-color: rgba(170,206,155,10%);
-    border-top:5px rgb(170, 206, 155) solid;
+    border-top: 5px rgb(170, 206, 155) solid;
     text-align: left;
-    /* font-size: 0.5em; */
 }
 main p{
     font-size: 0.8em;
 }
 #txt-aling-left{
-    font-size:1em;
+    font-size: 1em;
 } 
 main h1 span{
     text-transform: uppercase;
@@ -62,16 +57,16 @@ main {
     font-size: 1em;
 }
 main img{
-    margin-top: 10%;
-    margin-bottom: 5%;
     width: 100%;
     max-width: 700px;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 #app-features{
     width: 95%;
     margin-left: 3%;
     margin-right: 3%;
-    margin-top:3%;
+    margin-top: 3%;
     border-top: 2px rgba(221,225,227) solid;
     border-bottom: 2px rgba(221,225,227) solid;
 }
@@ -84,12 +79,12 @@ main img{
     margin-top: 10%;
 }
 .btn{
+    display: none;
     padding: 15px;
     background-color: rgb(170,206,155);
     border-radius: 3px;
     border: none;
     font-weight: 500;
-    display: none;
 }
 .txt-dark{
     color:rgb(55,56,103,100%);
@@ -98,40 +93,38 @@ main img{
     color:rgba(55, 56, 103, 0.4);
 }
 .sub-title{
-    font-size: 2.5em;
     width: 75%;
+    font-size: 2.5em;
 }
 .txt-desktop{
     display: none;
 }
 #ttl-features{
-    font-size: 1.7em;
     width: 45%;
     margin-bottom: 10%;
     padding-bottom: 5%;
     border-bottom: 4px rgb(170, 206, 155) solid;
+    font-size: 1.7em;
 }
 #form{
     width: 90%;
     max-width: 530px;
     margin-left: 5%;
-    /* margin-right: 5%; */
     font-weight: 500;
 }
 form input{
     width: 95%;
     max-width: 5300px;
+    padding: 3%;
     border: 1px rgba(55, 56, 103, 100%) solid;
     border-radius: 4px;
-    width: 95%;
-    padding: 3%;
 }
 form label{
-    width: 95%;
     display: block;
-    font-weight: bold;
+    width: 95%;
     margin-top: 5%;
     margin-bottom: 5%;
+    font-weight: bold;
 }
 form select{
     width: 102%;
@@ -152,8 +145,8 @@ form select{
     font-size: 1.7em;
 }
 #input-send{
-    margin-left: 35%;
     width: 30%;
+    margin-left: 35%;
     background-color:rgb(170,206,155);
     border: none;
     border-radius: 3px;
@@ -161,8 +154,8 @@ form select{
 }
 #input-clear{
     width: 30%;
-    margin-left: 35%;
     margin-top: 5%;
+    margin-left: 35%;
     margin-bottom: 5%;
     background-color: rgb(255, 255, 255);
     border: 1px rgba(55, 56, 103, 100%) solid;
@@ -171,9 +164,9 @@ form select{
 }
 #history{
     width: 95%;
+    margin-top: 5%;
     margin-left: 3%;
     margin-right: 3%;
-    margin-top: 5%;
     border-top: 2px rgba(221,225,227) solid;
     border-bottom: 2px rgba(221,225,227) solid;
 }
@@ -181,16 +174,16 @@ form select{
     border-left: 3px rgb(55,56,103,100%) solid;
 }
 .history-img-desktop{
-    width:100%;
+    width: 100%;
     max-width: 371px;
 }
 #history-img-tablet{
-    display:none
+    display: none;
 }
 #history p{
+    padding-left: 3%;
     font-size: 0.9em;
     line-height: 1.2em;
-    padding-left: 3%;
 }
 #activities-section{
     display: flex;
@@ -211,7 +204,7 @@ form select{
     font-weight: 500;
 }
 .activities{
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -220,11 +213,11 @@ form select{
     max-width: 111px;
 }
 .activities-container h3{
-    width:100%;
-    font-size: 2em;
-    text-align: center;
+    width: 100%;
     margin-top: 10%;
     margin-bottom: 5%;
+    font-size: 2em;
+    text-align: center;
 }
 #pagination{
     width: 95%;
@@ -235,27 +228,29 @@ form select{
     align-items: flex-start;
     list-style-type: none;
 }
-#pagination a:link, #pagination a:hover, #pagination a:visited {
+#pagination li a:link, #pagination li a:visited{
+    list-style: none;
+    text-decoration: none;
     padding: 10px;
     border:1px rgba(170,206,155) solid;
     border-radius: 6px;
-    font-size:13px;
+    font-size: 13px;
     text-align: center;
     text-decoration: none;
     color: rgba(170,206,155);
 }
 .pag-mobile{
-    display:none;
+    display: none;
 }
 footer img{
     padding-left: 32px;
 }
 #footer{
-    width:100%;
-    border-top:5px rgb(170, 206, 155) solid;
+    width: 100%;
     padding-top: 3%;
-    text-align: center;
+    border-top: 5px rgb(170, 206, 155) solid;
     font-size: 0.8em;
+    text-align: center;
 }
 @media only screen and (min-width: 601px) {
         
@@ -264,7 +259,7 @@ footer img{
         margin-left: 18px;
     }
     #main-txt{
-        display:flex;
+        display: flex;
         flex-direction: column;
     }
     main p{
@@ -283,7 +278,7 @@ footer img{
     .features-container{
         display: flex;
         flex-direction: column;
-        margin:3%;
+        margin: 3%;
         font-size: 0.9em;
     }
     .features h3{
@@ -309,14 +304,14 @@ footer img{
         border-bottom: 2px rgba(221,225,227) solid;
     }
     #history-img-tablet{
-        display:flex; 
+        display: flex; 
     }
     #history-img-tablet img{
-        width:90%;
+        width: 90%;
         max-width: 300px;
     }
     .history-img-desktop{
-        display:none;
+        display: none;
     }
     #txt-history{
         border-left: 3px rgb(55,56,103,100%) solid;
@@ -351,17 +346,18 @@ footer img{
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
-        list-style-type: none;
         padding: 3%;
+        list-style-type: none;
     }
-    #pagination a:link, #pagination:hover{
+    #pagination li a:link, #pagination li a:visited, #pagination li a:hover{
         padding: 10px;
-        border: 1px rgba(170,206,155) solid;
+        border:1px rgba(170,206,155) solid;
         border-radius: 6px;
-        font-size: 13px;
-        text-align: center;
-        text-decoration: none;
+        font-size:13px;
         color: rgba(170,206,155);
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
     }
     .pag-mobile{
         display: block;
@@ -369,9 +365,9 @@ footer img{
 }
 @media only screen and (min-width: 1024px){
     header{
-        margin-left: 3%;
         width: 97%;
         border-bottom: 5px rgb(170, 206, 155) solid;
+        margin-left: 3%;
     }
     #landing-desktop{
         display: flex;
@@ -379,67 +375,20 @@ footer img{
         padding-top: 15px;
         margin-left: 30px;
     }
-    nav{
-        display: block;
-        background-color: none;
-        margin-left: 20px;
-    }
-    nav li{
-        border-bottom: 1px rgb(96,92,115) solid;
-        padding-bottom: 5%;
-        padding-top: 5%
-    }
-    nav ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-        font-weight: 500;
-    }
-    nav input{
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        background-color: rgba(170,206,155,10%);
-        border: 1px rgba(55, 56, 103, 100%) solid;
-        border-radius: 5px;
-        padding: 10px;
-        font-weight: bold;
-    }
-    #menu-txt{
-        border-bottom: 5px rgb(170, 206, 155) solid;
-        width: 33%;
-        font-weight: 500;
-        font-size: 1.5em;
-    }
-    #contact h2{
-        border-bottom: 5px rgb(170, 206, 155) solid;
-        width: 53%;
-    }
-    .contact-container{
-        font-size: 0.9em;
-        display: flex;
-        border-bottom: 1px rgb(96,92,115) solid;
-    }
-    .contact-container img{
-        height: 30%;
-        padding-top: 5%;
-        margin-right: 3%;
-    }
     main{
+        width: 800px;
+        height: 720px;
         background-image: url(../../assets/img/peope-working-out-desktop.png);
         background-repeat: no-repeat;
         background-position: right top;
-        height: 720px;
-        width: 800px;
         border: none;
     }
     main .txt-content{
-        color:#fff;
         padding: 20px;
         font-weight: 300;
         line-height: 1.5em;
         font-size: 16px;
+        color:#fff;
     }
     #txt-aling-left{
         font-weight: 500;
@@ -451,9 +400,9 @@ footer img{
     }
     .btn{
         display: block;
+        width: 20%;
         padding: 15px;
         margin: 10%;
-        width: 20%;
         background-color: rgb(170,206,155);
         border-radius: 3px;
         border: none;
@@ -467,6 +416,65 @@ footer img{
         height: 710px;
         background-color: rgba(32,32,32,45%) ;
     }
+    nav{
+        display: block;
+        background-color: none;
+        margin-left: 20px;
+    }
+    nav li{
+        border-bottom: 1px rgb(96,92,115) solid;
+        padding-bottom: 5%;
+        padding-top: 5%
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        list-style: none;
+    }
+    nav a{
+        text-decoration: none;
+    }
+    nav a:hover, nav a:link, nav a:visited, nav:active{
+        color:rgb(55,56,103,100%);
+    }
+    nav input{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 10px;
+        background-color: rgba(170,206,155,10%);
+        border: 1px rgba(55, 56, 103, 100%) solid;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    #search{
+        padding-left: 15%;
+        background-image: url("../../assets/img/icon.png"); 
+        background-repeat: no-repeat; 
+        background-position: 5px center; 
+      }
+    #menu-txt{
+        border-bottom: 5px rgb(170, 206, 155) solid;
+        width: 33%;
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+    #contact h2{
+        border-bottom: 5px rgb(170, 206, 155) solid;
+        width: 53%;
+    }
+    .contact-container{
+        display: flex;
+        border-bottom: 1px rgb(96,92,115) solid;
+        font-size: 0.9em;
+    }
+    .contact-container img{
+        height: 30%;
+        padding-top: 5%;
+        margin-right: 3%;
+    }
     .features-img{
         height: 50%;
         margin-right: 5px;
@@ -474,8 +482,8 @@ footer img{
     .features-flex{
         display: flex;
         flex-direction: row;
-        margin-bottom: 10%;
         height: 200px;
+        margin-bottom: 10%;
         font-size: 0.9em;
     }
     .txt-desktop{
@@ -488,14 +496,60 @@ footer img{
         width: 30%;
         margin-bottom: 10px;
     }
+    #history-container{
+        display: flex;
+    }
+    #history{
+        padding-bottom: 2%;
+        border-bottom: 2px rgba(221,225,227) solid;
+    }
+    #history-img-tablet{
+        display: none;
+    }
+    .history-img-desktop{
+        display: block;
+        width: 590px;
+    }
+    #origin, #mission{
+        width: 100%;
+        margin-left: 3%;
+    }
+    #form{
+        width: 100%;
+        max-width: 950px;
+    }
+    #form-flex{
+        display: flex;
+        padding-right: 1%;
+    }
+    #form-name, #form-last-name, #form-email{
+        display: inline-block;
+        width: 30%;
+        padding-left: 1%;
+    }
+    #contact-reason{
+        width: 611px;
+        padding: 10px;
+        margin-bottom: 30px;
+        border: 1px rgba(55, 56, 103, 100%) solid;
+        border-radius: 4px;
+    }
     #activities-section{
-        display:block ;
+        display: block ;
         width: 100%;
         margin-left: 3%;
         margin-right: 3%;
         margin-top: 5%;
         font-size: 0.9em;
         font-weight: 500;
+    }
+    #input-clear{
+        width: 133px;
+        padding: 8px;
+    }
+    #input-send{
+        width: 133px;
+        padding: 9px;
     }
     .activities-flex{
         display: flex;
@@ -507,29 +561,16 @@ footer img{
     .activities{
         width: 100%;
     }
-    #pagination ol{
-        text-align: center;
+    #pagination ul{
+        padding: 1%;
+    }
+    #pagination li a:link, #pagination li a:visited, #pagination li a:hover{
+        list-style: none;
+        text-decoration: none;
+        width: 10px;
+        height: 15px;
     }
     .pag-mobile{
         display: block;
-    }
-    /* #history{
-        display: flex;
-        flex-direction: column;
-        height: 500px;
-    } */
-    #history-container{
-        display: flex;
-    }
-    #history-img-tablet{
-        display:none;
-    }
-    .history-img-desktop{
-        display:block;
-        width: 590px;
-    }
-    #origin, #mission{
-        width:100%;
-        margin-left:3%;
     }
 }

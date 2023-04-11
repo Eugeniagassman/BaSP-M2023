@@ -40,7 +40,7 @@
         </header>
         <div id="landing-desktop">
             <nav class="txt-dark">
-                <input type="text" placeholder="search">
+                <input id="search" type="text" placeholder="search">
                 <p id="menu-txt" class="txt-dark">Menu</p>
                 <ul class="txt-dark">
                     <li><a href="#">Home</a></li>
@@ -169,11 +169,15 @@
         <article id="form">
             <h3 id="form-title" class="txt-dark">Contact</h3>
             <form class="txt-dark" action="url" method="post">
-                <div id="form-flex">
+                <div id="form-name">
                     <label id="label-name" class="form-block" for="name">Name</label>
                     <input id="input-name" type="text" name="name" placeholder="Write here">
+                </div>
+                <div id="form-last-name">
                     <label id="last-name" class="form-block" for="last-name">Last Name</label>
                     <input id="last-name" type="text"  name="last-name" placeholder="Write here">
+                </div>
+                <div id="form-email">
                     <label class="form-block"for="email">Email</label>
                     <input id="email" type="email" name="email" placeholder="Write here">
                 </div>
