@@ -37,6 +37,18 @@ a{
 }
 nav{
     display:none;
+    width:30%;
+    padding: 3%;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+nav a{
+    padding: 5%;
 }
 main{
     margin-left:3%;
@@ -63,7 +75,7 @@ main img{
     margin-top: 10%;
     margin-bottom: 5%;
     width: 100%;
-    max-width: 705px;
+    max-width: 700px;
 }
 #app-features{
     width: 95%;
@@ -187,32 +199,49 @@ form select{
     line-height: 1.2em;
     padding-left: 3%;
 }
-#activities{
+#activities-section{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-left: 3%;
     margin-right: 3%;
-    margin-top:5%;
+    margin-top: 5%;
     font-size: 0.9em;
     font-weight: 500;
 }
-#activities h3{
+.activities-flex{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    text-align: center;
+    margin-top: 5%;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.activities{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 .activities-img{
-    width: 30%;
+    width: 33%;
     max-width: 111px;
 }
-.activities-list{
+.activities-container h3{
+    width:100%;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+/* .activities-container li{
+    margin-left:10%;
+}   */
+/* .activities-list{
    display: flex;
    flex-direction: column;
    align-items: center;
    width: 95%;
-}
+} */
 #pagination{
     width: 95%;
 }
@@ -221,9 +250,9 @@ form select{
     justify-content: space-around;
     align-items: flex-start;
     list-style-type: none;
-    padding: 3%;
+    /* padding: 3%; */
 }
-#pagination a:link, #pagination:hover{
+#pagination a:link, #pagination:hover, #pagination a:visited, #pagination a:active{
     padding: 10px;
     border:1px rgba(170,206,155) solid;
     border-radius: 6px;
@@ -236,7 +265,7 @@ footer img{
     padding-left: 32px;
 }
 #footer{
-    width:95%;
+    width:100%;
     border-top:5px rgb(170, 206, 155) solid;
     padding-top: 3%;
     text-align: center;
@@ -310,11 +339,8 @@ footer img{
         line-height: 1.2em;
         padding-left: 3%;
     }
-    .activities-list{
-        display: flex;
+    .activities{
         flex-direction: row;
-        margin:3%;
-        font-size: 0.9em;
     }
     #activities h3{
         width: 100%;
@@ -322,9 +348,13 @@ footer img{
     .activities-img{
         width: 35%;
         max-width: 111px;
+        margin:5%;
     }
     #pagination{
         width: 95%;
+    }
+    #pagination a {
+        color: rgba(170,206,155);
     }
     #pagination ul{
         display: flex;
@@ -342,15 +372,84 @@ footer img{
         text-decoration: none;
         color: rgba(170,206,155);
     }
-    footer img{
-        padding-left: 32px;
+    @media only screen and (min-width: 1024px){
+        #landing-desktop{
+            display:flex;
+            background-color:rgba(170,206,155,10%);
+            border-top:5px rgb(170, 206, 155) solid;
+        }
+        nav{
+            display: block;
+            background-color: none;
+        }
+        main{
+            background-image: url(../../assets/img/peope-working-out-desktop.png);
+            background-repeat: no-repeat;
+            background-position: right top;
+            height: 720px;
+            width: 800px;
+            border:none;
+        }
+        main .txt-content{
+            color:#fff;
+            padding: 20px;
+            font-weight: 300;
+            line-height: 1.5em;
+            font-size: 16px;
+        }
+        #txt-aling-left{
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+        main .txt-dark{
+            color:#fff;
+            padding: 20px;
+        }
+        .btn{
+            display:block;
+            padding: 15px;
+            margin:10%;
+            width: 20%;
+            background-color: rgb(170,206,155);
+            border-radius: 3px;
+            border: none;
+            font-weight: 500;
+            color:rgba(55, 56, 103, 0.4)
+        }
+        main img{
+            display:none;
+        }
+        #main-opacity{
+            height: 710px;
+            background-color: rgba(32,32,32,45%) ;
+        }
+        .features-img{
+            height: 50%;
+            margin-right: 5px;
+        }
+        .features-flex{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10%;
+            height: 200px;
+            font-size: 0.9em;
+        }
+        .txt-desktop{
+            display: block;
+        }
+        .txt-mobile{
+            display:none;
+        }
+        #ttl-features{
+            width:30%;
+            margin-bottom:10px;
+        }
+        .activities-flex{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10%;
+            height: 200px;
+            font-size: 0.9em;
+        }
     }
-    #footer{
-        width:95%;
-        border-top:5px rgb(170, 206, 155) solid;
-        padding-top: 3%;
-        text-align: center;
-        font-size: 0.8em;
-    }
-    
 }
