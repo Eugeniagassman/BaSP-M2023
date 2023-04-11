@@ -41,25 +41,31 @@
         <div id="landing-desktop">
             <nav class="txt-dark">
                 <input type="text" placeholder="search">
-                <p>Menu</p>
+                <p id="menu-txt" class="txt-dark">Menu</p>
                 <ul class="txt-dark">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sign Up</a></li>
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Contac Information</a></li> 
                 </ul>
-                <div>
+                <div id="contact">
                     <h2>Contact Us</h2>
                     <p>
                         Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
                         Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
                     </p>
-                    <img src="../assets/img/mail.png" alt="mail image">
-                    <p>info.megarocket@megarocket.com</p>
-                    <img src="../assets/img/contact-tel.png" alt="telephone image ">
-                    <p>54-341-xxxxxxxxx</p>
-                    <img src="../assets/img/house.png" alt="house image">
-                    <p>AAA xxx, Rosario, Argentina, CP 2000</p>
+                    <div class="contact-container">
+                        <img src="../assets/img/mail.png" alt="mail image">
+                        <p>info.megarocket@megarocket.com</p>
+                    </div>
+                    <div class="contact-container">
+                        <img src="../assets/img/contact-tel.png" alt="telephone image ">
+                        <p>54-341-xxxxxxxxx</p>
+                    </div>
+                    <div class="contact-container">
+                        <img src="../assets/img/house.png" alt="house image">
+                        <p>AAA xxx, Rosario, Argentina, CP 2000</p>
+                    </div>
                 </div>
             </nav>
             <main>
@@ -198,29 +204,35 @@
                 Donec egestas ligula lacus, nec eleifend odio tempor vel.
                 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
             </p>
-            <div id="origin">
-                <h3 class="txt-dark">Origin</h3>
-                <p class="txt-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat ante odio,
-                    id semper erat varius ut. Fusce ultricies tempor vehicula. In lobortis varius arcu et dignissim.
-                    Donec egestas ligula lacus, nec eleifend odio tempor vel. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Phasellus dignissim imperdietultricies tempor
-                    vehicula. In lobortis varius arcu et dignissim. Donec egestas ligula lacus, nec eleifend odio
-                    tempor vel.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                    curae; Phasellus dignissim imperdiet
-                </p>
-                <img src="../assets/img/gym2.png" alt="gym weights image">
-            </div>
-            <div id="mission">
-                <img src="../assets/img/gym.png" alt="gym image">
-                <h3 class="txt-dark">Mission</h3>
-                <p class="txt-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat ante odio,
-                    id semper erat varius ut. Fusce ultricies tempor vehicula. In lobortis varius arcu et
-                    dignissim. Donec egestas ligula lacus, nec eleifend odio tempor vel. Vestibulum ante ipsum
-                    primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus dignissim
-                    imperdietultricies tempor vehicula.
-                </p>
+            <div id="history-container">
+                <div id="origin">
+                    <h3 class="txt-dark">Origin</h3>
+                    <p class="txt-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat ante odio,
+                        id semper erat varius ut. Fusce ultricies tempor vehicula. In lobortis varius arcu et dignissim.
+                        Donec egestas ligula lacus, nec eleifend odio tempor vel. Vestibulum ante ipsum primis in faucibus
+                        orci luctus et ultrices posuere cubilia curae; Phasellus dignissim imperdietultricies tempor
+                        vehicula. In lobortis varius arcu et dignissim. Donec egestas ligula lacus, nec eleifend odio
+                        tempor vel.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                        curae; Phasellus dignissim imperdiet
+                    </p>
+                    <img class="history-img-desktop"src="../assets/img/gym2.png" alt="gym weights image">
+                </div>
+                <div id="history-img-tablet">
+                    <img src="../assets/img/gym2.png" alt="gym weights image">
+                    <img src="../assets/img/gym.png" alt="gym image">
+                </div>
+                <div id="mission">
+                    <img class="history-img-desktop" src="../assets/img/gym.png" alt="gym image">
+                    <h3 class="txt-dark">Mission</h3>
+                    <p class="txt-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat ante odio,
+                        id semper erat varius ut. Fusce ultricies tempor vehicula. In lobortis varius arcu et
+                        dignissim. Donec egestas ligula lacus, nec eleifend odio tempor vel. Vestibulum ante ipsum
+                        primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus dignissim
+                        imperdietultricies tempor vehicula.
+                    </p>
+                </div>
             </div>
         </article>
         <div id="activities-section">
@@ -284,8 +296,8 @@
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
+                    <li class="pag-mobile"><a href="#">4</a></li>
+                    <li class="pag-mobile"><a href="#">5</a></li>
                     <li><a href="#">...</a></li>
                     <li><a href="#">Next</a></li>
                 </ul>
