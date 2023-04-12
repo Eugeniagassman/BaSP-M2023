@@ -43,13 +43,17 @@ You can directly download the code from this repository,
 *  Manages the admin, being able to add, modify or delete it if necessary.
 
 ## Week 01
-we made a Figma project. We did an screenflow about this application, with functionality of each section
+We made a Figma project. We did an screenflow about this application, with functionality of each section
 
 ## Week 02
 In this week we transfer the structure of the application, without styles. Only html language
 
 ## Week 03
 After the second week we started to add styles. We link css and an reset file. This time the style was not responsive design
+
+## Week 04
+This week we work with responsive design for tablet and desktop, we also add github pages. (https://eugeniagassman.github.io/BaSP-M2023/Week-04/index.html)
+For the responsinve desing we used flexbox
 
 ## Authors
 - Gassman Eugenia

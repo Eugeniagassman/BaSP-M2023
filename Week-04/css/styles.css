@@ -2,7 +2,7 @@ body{
     width:95%;
     font-family: 'Roboto', sans-serif;
 }
-header{
+/* header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +28,7 @@ header #menu img{
 }
 .header img{
     height: 1em;
-}
+} */
 a{
     text-decoration: none;
 }
@@ -242,7 +242,7 @@ form select{
 .pag-mobile{
     display: none;
 }
-footer img{
+/* footer img{
     padding-left: 32px;
 }
 #footer{
@@ -251,13 +251,13 @@ footer img{
     border-top: 5px rgb(170, 206, 155) solid;
     font-size: 0.8em;
     text-align: center;
-}
+} */
 @media only screen and (min-width: 601px) {
         
-    header{
+    /* header{
         width: 95%;
         margin-left: 18px;
-    }
+    } */
     #main-txt{
         display: flex;
         flex-direction: column;
@@ -364,11 +364,11 @@ footer img{
     }
 }
 @media only screen and (min-width: 1024px){
-    header{
+    /* header{
         width: 97%;
         border-bottom: 5px rgb(170, 206, 155) solid;
         margin-left: 3%;
-    }
+    } */
     #landing-desktop{
         display: flex;
         background-color: rgba(170,206,155,10%);
@@ -454,7 +454,7 @@ footer img{
         background-image: url("../../assets/img/icon.png"); 
         background-repeat: no-repeat; 
         background-position: 5px center; 
-      }
+    }
     #menu-txt{
         border-bottom: 5px rgb(170, 206, 155) solid;
         width: 33%;
