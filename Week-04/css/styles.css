@@ -2,33 +2,6 @@ body{
     width:95%;
     font-family: 'Roboto', sans-serif;
 }
-/* header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 10px;
-    color:rgba(55, 56, 103, 0.4);
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    margin-left: 3%;
-}
-header #menu img{
-    height: 1.5em;
-}
-.header h2{
-    font-size: 0.7em;
-}
-.header a{
-    letter-spacing: 0.5em;
-}
-.header img{
-    height: 1em;
-} */
 a{
     text-decoration: none;
 }
@@ -242,22 +215,7 @@ form select{
 .pag-mobile{
     display: none;
 }
-/* footer img{
-    padding-left: 32px;
-}
-#footer{
-    width: 100%;
-    padding-top: 3%;
-    border-top: 5px rgb(170, 206, 155) solid;
-    font-size: 0.8em;
-    text-align: center;
-} */
-@media only screen and (min-width: 601px) {
-        
-    /* header{
-        width: 95%;
-        margin-left: 18px;
-    } */
+@media only screen and (min-width: 601px) { 
     #main-txt{
         display: flex;
         flex-direction: column;
@@ -364,11 +322,6 @@ form select{
     }
 }
 @media only screen and (min-width: 1024px){
-    /* header{
-        width: 97%;
-        border-bottom: 5px rgb(170, 206, 155) solid;
-        margin-left: 3%;
-    } */
     #landing-desktop{
         display: flex;
         background-color: rgba(170,206,155,10%);
