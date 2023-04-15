@@ -26,18 +26,20 @@ vii.“Anciano” si es mayor a 75 años.
 
 console.log('--Exercise 4.b');
 
-var Age = 31;
-if(Age < 2){
+var age = 31;
+if(age < 2){
     console.log('Bebe');
-}else if((Age >= 2) && (Age <= 12)){
+}else if((age >= 2) && (age <= 12)){
     console.log('Niño');
-}else if((Age >= 13) && (Age <= 19)){
+}else if((age >= 13) && (age <= 19)){
     console.log('Adolescente');
-}else if((Age >= 20) && (Age <= 30)){
+}else if((age >= 20) && (age <= 30)){
     console.log('Joven');
-}else if((Age >= 31) && (Age <= 75)){
+}else if((age >= 31) && (age <= 60)){
     console.log('Adulto');
-}else if(Age > 75){
+}else if((age >= 61) &&(age <= 75)){
+    console.log('Adulto mayor');
+}else{
     console.log('Anciano');
 }
 
