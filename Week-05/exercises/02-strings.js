@@ -52,7 +52,11 @@ y el operador +). */
 
 console.log('--Exercise 2.f');
 
-var txtEx2F = 'exercise numBer2';
-var resultEx2F = (txtEx2F.substring(0,1).toUpperCase() + txtEx2F.substring(1,9) + txtEx2F.substring(9,10).toUpperCase() 
-+ txtEx2F.substring(10).toLowerCase());
+var txtEx2F = 'exercisE numBer2';
+var position = txtEx2F.indexOf(' ');
+var txtFirst = txtEx2F.substring(0,1);
+var txtFirst2 = txtEx2F.substring(1, position + 1);
+var txtSecond = txtEx2F.substring(position + 1, position + 2);
+var txtSecond2 = txtEx2F.substring(position + 2);
+var resultEx2F = txtFirst.toUpperCase() + txtFirst2.toLowerCase() + txtSecond.toUpperCase() + txtSecond2.toLowerCase();
 console.log(resultEx2F);
