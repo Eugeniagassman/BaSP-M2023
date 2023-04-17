@@ -6,11 +6,11 @@ console.log('--EXERCISE 6: FUNCTIONS');
 
 console.log('--Exercise 6.a');
 
-function suma(a,b){
+function sum(a,b){
  return a + b;
 }
-var sumaEx6a = suma(1,2);
-console.log(sumaEx6a);
+var resultEx6a = sum(1,2);
+console.log(resultEx6a);
 
 // b.Copiar la función suma anterior y agregarle una validación para controlar si
 // alguno de los parámetros no es un número; de no ser un número, mostrar un alert
@@ -18,16 +18,16 @@ console.log(sumaEx6a);
 
 console.log('--Exercise 6.b');
 
-function suma(a,b){
+function sum(a,b){
     if ((isNaN(a)) || (isNaN(b))){
-        alert('Uno de los parámetros tiene error');
+        alert('One of the parameters has an error');
         return NaN;
     }else{
         return a + b;
     }
 }
-var sumaEx6b = suma(1,'e');
-console.log(sumaEx6b);
+var resultEx6b = sum(1,'e');
+console.log(resultEx6b);
 
 // c.Crear una función “validateInteger” que reciba un número como parámetro y
 //devuelva verdadero si es un número entero.
@@ -46,20 +46,20 @@ console.log(numberEx6c);
 
 console.log('--Exercise 6.d');
 
-function sumaEx6d(a,b){
+function sumEx6d(a,b){
     if ((isNaN(a)) || (isNaN(b))){
-        alert('Uno o ambos de los parámetros tiene error');
+        alert('One of the parameters has an error');
         return NaN;
     }else{
         if(validateInteger(a) && validateInteger(b)){
             return a + b;
         }else{
-            alert('Uno o ambos de los numeros no es entero')
+            alert('One of the numbers is not integer')
             return Math.round(a) + Math.round(b);
         }
     }
 }
-var resultEx6d = sumaEx6d(1,2.5);
+var resultEx6d = sumEx6d(1,2.5);
 console.log(resultEx6d);
 
 // e.Convertir la validación del ejercicio 6d) en una función separada y llamarla
@@ -69,20 +69,19 @@ console.log('--Exercise 6.e');
 
 function validation (x){
     if ( isNaN(x)){
-        alert('No es un ' + x + ' numero');
+        alert( x + ' is not a number');
         return NaN;
     }else{
-        if(validateInteger(x)){
-            return x;   
+        if (x % 1 === 0){
+            return x;
         }else{
-            alert('El numero ' + x + ' no es entero')
+            alert('The number ' + x + ' is not integer')
             return Math.round(x);
         }
     }
 }
 
-function sumaEx6e(a,b){
+function sumEx6e(a,b){
     return validation(a) + validation(b);
 }
-console.log(sumaEx6e(2,2.5));
-
+console.log(sumEx6e(2,2.4));
