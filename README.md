@@ -26,11 +26,15 @@ We made a Figma project. We did an screenflow about this application, with funct
 In this week we transfer the structure of the application, without styles. Only html language
 
 ## Week 03
-After the second week we started to add styles. We link css and an reset file. This time the style was not responsive design
+After the second week we started to add styles. We link css and and reset file. This time the style was not responsive design
 
 ## Week 04
-This week we work with responsive design for tablet and desktop, we also add github pages. (https://eugeniagassman.github.io/BaSP-M2023/Week-04/index.html)
+This week we work with responsive design for tablet and desktop, we also add github pages. 
+[Link-page index.html](https://eugeniagassman.github.io/BaSP-M2023/Week-04/index.html "Index")
 For the responsinve desing we used flexbox
+
+## Week 05
+This week we start with JavaScript. We studied its fundamentals and we saw variables, functions, if-else, Arrays, loop for. We did JavaScript exercises , without adding js yet to our Mega Rocket application. We also made corrections for week 04.
 
 ## Authors
 - Gassman Eugenia
