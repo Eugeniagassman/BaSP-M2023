@@ -1,0 +1,529 @@
+body{
+    width:95%;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display: none;
+    width: 30%;
+    padding: 3%;
+}
+main{
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: rgba(170,206,155,10%);
+    border-top: 5px rgb(170, 206, 155) solid;
+    text-align: left;
+}
+main p{
+    font-size: 0.8em;
+}
+#txt-aling-left{
+    font-size: 1em;
+} 
+main h1 span{
+    text-transform: uppercase;
+}
+main {
+    font-size: 1em;
+}
+main img{
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+#app-features{
+    width: 95%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+    border-top: 2px rgba(221,225,227) solid;
+    border-bottom: 2px rgba(221,225,227) solid;
+}
+.features{
+    width: 100%;
+}
+.features-img{
+    width: 25%;
+    max-width: 110px;
+    margin-top: 10%;
+}
+.btn{
+    display: none;
+    padding: 15px;
+    background-color: rgb(170,206,155);
+    border-radius: 3px;
+    border: none;
+    font-weight: 500;
+}
+.txt-dark{
+    color:rgb(55,56,103,100%);
+}
+.txt-content{
+    color:rgba(55, 56, 103, 0.4);
+}
+.sub-title{
+    width: 75%;
+    font-size: 2.5em;
+}
+.txt-desktop{
+    display: none;
+}
+#ttl-features{
+    width: 45%;
+    margin-bottom: 10%;
+    padding-bottom: 5%;
+    border-bottom: 4px rgb(170, 206, 155) solid;
+    font-size: 1.7em;
+}
+#form{
+    width: 90%;
+    max-width: 530px;
+    margin-left: 5%;
+    font-weight: 500;
+}
+form input{
+    width: 95%;
+    max-width: 5300px;
+    padding: 3%;
+    border: 1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 4px;
+}
+form label{
+    display: block;
+    width: 95%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+form select{
+    width: 102%;
+    padding: 3%;
+    border: 1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 4px;
+}
+#message{
+    width: 100%;
+    height: 100px;
+    border: 1px rgba(224,224,224) solid;
+    border-radius: 4px;
+}
+#form-title{
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 1.7em;
+}
+#input-send{
+    width: 30%;
+    margin-left: 35%;
+    background-color:rgb(170,206,155);
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+#input-clear{
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#history{
+    width: 95%;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-top: 2px rgba(221,225,227) solid;
+    border-bottom: 2px rgba(221,225,227) solid;
+}
+#txt-history{
+    border-left: 3px rgb(55,56,103,100%) solid;
+}
+.history-img-desktop{
+    width: 100%;
+    max-width: 371px;
+}
+#history-img-tablet{
+    display: none;
+}
+#history p{
+    padding-left: 3%;
+    font-size: 0.9em;
+    line-height: 1.2em;
+}
+#activities-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.activities-flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.activities{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.activities-img{
+    width: 33%;
+    max-width: 111px;
+}
+.activities-container h3{
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 2em;
+    text-align: center;
+}
+#pagination{
+    width: 95%;
+}
+#pagination ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style-type: none;
+}
+#pagination li a:link, #pagination li a:visited{
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    border:1px rgba(170,206,155) solid;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(170,206,155);
+}
+.pag-mobile{
+    display: none;
+}
+@media only screen and (min-width: 601px) { 
+    #main-txt{
+        display: flex;
+        flex-direction: column;
+    }
+    main p{
+        font-size: 1em;
+    }
+    #main-img{
+        order: 2;
+    }
+    .features{
+        display: flex;
+        width: 100%;
+    }
+    .features-img{
+        height: 35%;
+    }
+    .features-container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3%;
+        font-size: 0.9em;
+    }
+    .features h3{
+        font-size: 2em;
+    }
+    #form-btn{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #input-send{
+        margin: 29px 13px;
+    }
+    #input-clear{
+        margin: 29px 13px;
+    }
+    #history{
+        width: 95%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 5%;
+        border-top: 2px rgba(221,225,227) solid;
+        border-bottom: 2px rgba(221,225,227) solid;
+    }
+    #history-img-tablet{
+        display: flex; 
+    }
+    #history-img-tablet img{
+        width: 90%;
+        max-width: 300px;
+    }
+    .history-img-desktop{
+        display: none;
+    }
+    #txt-history{
+        border-left: 3px rgb(55,56,103,100%) solid;
+    }
+    #history-title{
+        font-size: 1.5em;
+    }
+    #history p{
+        width: 95%;
+        font-size: 0.9em;
+        line-height: 1.2em;
+        padding-left: 3%;
+    }
+    .activities{
+        flex-direction: row;
+    }
+    #activities h3{
+        width: 100%;
+    }
+    .activities-img{
+        width: 35%;
+        max-width: 111px;
+        margin: 5%;
+    }
+    #pagination{
+        width: 95%;
+    }
+    #pagination a {
+        color: rgba(170,206,155);
+    }
+    #pagination ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 3%;
+        list-style-type: none;
+    }
+    #pagination li a:link, #pagination li a:visited, #pagination li a:hover{
+        padding: 10px;
+        border:1px rgba(170,206,155) solid;
+        border-radius: 6px;
+        font-size:13px;
+        color: rgba(170,206,155);
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+    }
+    .pag-mobile{
+        display: block;
+    }
+}
+@media only screen and (min-width: 1024px){
+    #landing-desktop{
+        display: flex;
+        background-color: rgba(170,206,155,10%);
+        padding-top: 15px;
+        margin-left: 30px;
+    }
+    main{
+        width: 800px;
+        height: 720px;
+        background-image: url(../../assets/img/peope-working-out-desktop.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        border: none;
+    }
+    main .txt-content{
+        padding: 20px;
+        font-weight: 300;
+        line-height: 1.5em;
+        font-size: 16px;
+        color:#fff;
+    }
+    #txt-aling-left{
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+    main .txt-dark{
+        color:#fff;
+        padding: 20px;
+    }
+    .btn{
+        display: block;
+        width: 20%;
+        padding: 15px;
+        margin: 10%;
+        background-color: rgb(170,206,155);
+        border-radius: 3px;
+        border: none;
+        font-weight: 500;
+        color:rgba(55, 56, 103, 0.4)
+    }
+    main img{
+        display: none;
+    }
+    #main-opacity{
+        height: 710px;
+        background-color: rgba(32,32,32,45%) ;
+    }
+    nav{
+        display: block;
+        background-color: none;
+        margin-left: 20px;
+    }
+    nav li{
+        border-bottom: 1px rgb(96,92,115) solid;
+        padding-bottom: 5%;
+        padding-top: 5%
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        list-style: none;
+    }
+    nav a{
+        text-decoration: none;
+    }
+    nav a:hover, nav a:link, nav a:visited, nav:active{
+        color:rgb(55,56,103,100%);
+    }
+    nav input{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 10px;
+        background-color: rgba(170,206,155,10%);
+        border: 1px rgba(55, 56, 103, 100%) solid;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    #search{
+        padding-left: 15%;
+        background-image: url("../../assets/img/icon.png"); 
+        background-repeat: no-repeat; 
+        background-position: 5px center; 
+    }
+    #menu-txt{
+        border-bottom: 5px rgb(170, 206, 155) solid;
+        width: 33%;
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+    #contact h2{
+        border-bottom: 5px rgb(170, 206, 155) solid;
+        width: 53%;
+    }
+    .contact-container{
+        display: flex;
+        border-bottom: 1px rgb(96,92,115) solid;
+        font-size: 0.9em;
+    }
+    .contact-container img{
+        height: 30%;
+        padding-top: 5%;
+        margin-right: 3%;
+    }
+    .features-img{
+        height: 50%;
+        margin-right: 5px;
+    }
+    .features-flex{
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+        margin-bottom: 10%;
+        font-size: 0.9em;
+    }
+    .txt-desktop{
+        display: block;
+    }
+    .txt-mobile{
+        display: none;
+    }
+    #ttl-features{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    #history-container{
+        display: flex;
+    }
+    #history{
+        padding-bottom: 2%;
+        border-bottom: 2px rgba(221,225,227) solid;
+    }
+    #history-img-tablet{
+        display: none;
+    }
+    .history-img-desktop{
+        display: block;
+        width: 590px;
+    }
+    #origin, #mission{
+        width: 100%;
+        margin-left: 3%;
+    }
+    #form{
+        width: 100%;
+        max-width: 950px;
+    }
+    #form-flex{
+        display: flex;
+        padding-right: 1%;
+    }
+    #form-name, #form-last-name, #form-email{
+        display: inline-block;
+        width: 30%;
+        padding-left: 1%;
+    }
+    #contact-reason{
+        width: 611px;
+        padding: 10px;
+        margin-bottom: 30px;
+        border: 1px rgba(55, 56, 103, 100%) solid;
+        border-radius: 4px;
+    }
+    #activities-section{
+        display: block ;
+        width: 100%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 5%;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+    #input-clear{
+        width: 133px;
+        padding: 8px;
+    }
+    #input-send{
+        width: 133px;
+        padding: 9px;
+    }
+    .activities-flex{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10%;
+        height: 200px;
+        font-size: 0.9em;
+    }
+    .activities{
+        width: 100%;
+    }
+    #pagination ul{
+        padding: 1%;
+    }
+    #pagination li a:link, #pagination li a:visited, #pagination li a:hover{
+        list-style: none;
+        text-decoration: none;
+        width: 10px;
+        height: 15px;
+    }
+    .pag-mobile{
+        display: block;
+    }
+}
