@@ -35,6 +35,13 @@ For the responsinve desing we used flexbox
 
 ## Week 05
 This week we start with JavaScript. We studied its fundamentals and we saw variables, functions, if-else, Arrays, loop for. We did JavaScript exercises , without adding js yet to our Mega Rocket application. We also made corrections for week 04.
+[Link-page index.html](https://eugeniagassman.github.io/BaSP-M2023/Week-05/index.html "Index")
+
+## Week 06
+This week we implemented JavaScript in our sign up and login page. We use the DOM and addEventsLisstener. 
+We made the sign up and login pages responsive with css using flexbox and reusing styles from previous weeks. 
+[Link-page index.html](https://eugeniagassman.github.io/BaSP-M2023/Week-06/sign-up.html "Sign Up")
+[Link-page index.html](https://eugeniagassman.github.io/BaSP-M2023/Week-06/login.html "Login")
 
 ## Authors
 - Gassman Eugenia

@@ -92,10 +92,30 @@ dniInput.addEventListener('focus',function(){
 });
 
 //---BIRTHDAY---
-var birthdayInput = document.getElementById('birthdate-su');
-birthdayInput.addEventListener('blur', function(){
-
-})
+var birthdateInput = document.getElementById('birthdate-su');
+birthdateInput.addEventListener('blur', function(){
+    if(birthdateInput.value === ''){
+        document.getElementById('birthdate-error').innerText ='Must complete the field with your Birthdate';
+        addClassRed(birthdateInput);
+        isValid = false;
+    }else{
+        if(birthdateInput.value.substring(0,4) > 2017 ){
+            document.getElementById('birthdate-error').innerText ='The gym can only enter over 6 years';
+            addClassRed(birthdateInput);
+            isValid = false;
+        }else if(birthdateInput.value.substring(0,4) < 1933){
+            document.getElementById('birthdate-error').innerText ='Are you sure you are over 90 years old?';
+            addClassRed(birthdateInput);
+            isValid = false;
+        }else{
+            isValid = true;
+        }
+    }
+});
+birthdateInput.addEventListener('focus',function(){
+    removeClassRed(birthdateInput);
+    document.getElementById('birthdate-error').innerText='';
+});
 
 //---PHONE NUMBER---
 var phoneInput = document.getElementById('phone-number');
@@ -110,7 +130,7 @@ phoneInput.addEventListener('blur',function(){
             if (char >= 48 && char <= 57) {
             isValid = true;
             }else{
-                document.getElementById('dni-error').innerText ='Must be only numbers';
+                document.getElementById('phone-error').innerText ='Must be only numbers';
                 addClassRed(phoneInput);
                 isValid = false;
             }
@@ -145,6 +165,13 @@ addressInput.addEventListener('blur',function(){
             letters = true;
             }
         }
+        var spaceAtFirst = false;
+        var spaceIndex = addressInput.value.substring(0,1);
+        if(spaceIndex.indexOf(' ') ==-1){
+            spaceAtFirst = false;
+        }else{
+            spaceAtFirst = true;
+        }
         var spaces = false;
         for (i = 0; i < addressInput.value.length;i++){
             if (addressInput.value.indexOf(' ') == -1){
@@ -153,7 +180,7 @@ addressInput.addEventListener('blur',function(){
                 spaces = true;
             }
         }
-        if (!numbers || !letters || !spaces) {
+        if (!numbers || !letters || !spaces || spaceAtFirst) {
             document.getElementById('address-error').innerText = 
             'Must have At least 5 characters with letters, numbers and a space in between.';
             addClassRed(addressInput);
@@ -171,7 +198,36 @@ addressInput.addEventListener('focus',function(){
 
 //---CITY---
 var cityInput = document.getElementById('city-su');
+cityInput.addEventListener('blur',function(){
+    if(cityInput.value === ''){
+        document.getElementById('city-error').innerText ='Must complete the field with your city';
+        addClassRed(cityInput);
+    }else{
+        var numbers = false;
+        var letters = false;
+        for (i = 0; i < addressInput.value.length; i++) {
+            var char = addressInput.value.charCodeAt(i);
+            if (char >= 48 && char <= 57) {
+            numbers = true;
+            } else if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
+            letters = true;
+            }
+        }
+        if ((!numbers || numbers) && ( letters || !letters) && cityInput.value.length < 5) {
+            document.getElementById('city-error').innerText = 
+            'Must have At least 5 characters with letters or numbers';
+            addClassRed(addressInput);
+            isValid = false;
+        }else{
+            isValid = true;
+            }
+    }
+});
 
+cityInput.addEventListener('focus',function(){
+    removeClassRed(cityInput);
+    document.getElementById('city-error').innerText='';
+});
 
 //---POSTAL CODE---
 var postalCodeInput = document.getElementById('postal-code-su');
@@ -236,7 +292,8 @@ passwordInput.addEventListener('blur',function(){
         isValid = false;
     }else{
         if(passwordInput.value.length < 8){
-            document.getElementById('password-error').innerText = 'At least 8 characters, made up of letters and numbers.';
+            document.getElementById('password-error').innerText = 
+            'At least 8 characters, made up of letters and numbers.';
             addClassRed(passwordInput);
             isValid = false;
         }else{
@@ -250,7 +307,8 @@ passwordInput.addEventListener('blur',function(){
                 letters = true;
             }}
             if (!numbers || !letters) {
-                document.getElementById('password-error').innerText = 'At least 8 characters, made up of letters and numbers.';
+                document.getElementById('password-error').innerText = 
+                'At least 8 characters, made up of letters and numbers.';
                 addClassRed(passwordInput);
                 isValid = false;
             }else{
@@ -274,7 +332,8 @@ repeatPassInput.addEventListener('blur',function(){
         isValid = false;
     }else{
         if(repeatPassInput.value.length < 8){
-            document.getElementById('repeat-p-error').innerText = 'At least 8 characters, made up of letters and numbers.';
+            document.getElementById('repeat-p-error').innerText = 
+            'At least 8 characters, made up of letters and numbers.';
             addClassRed(repeatPassInput);
             isValid = false;
         }else{
@@ -288,7 +347,8 @@ repeatPassInput.addEventListener('blur',function(){
                 letters = true;
             }}
             if (!numbers || !letters) {
-                document.getElementById('repeat-p-error').innerText = 'At least 8 characters, made up of letters and numbers.';
+                document.getElementById('repeat-p-error').innerText = 
+                'At least 8 characters, made up of letters and numbers.';
                 addClassRed(repeatPassInput);
                 isValid = false;
             }else{
@@ -308,7 +368,7 @@ repeatPassInput.addEventListener('focus',function(){
 var btnRegister = document.getElementById('btn-register');
 btnRegister.addEventListener('click', function(){
     if(nameInput.value ===''|| lastNameInput.value ===''||
-    dniInput.value ===''|| birthdayInput.value ==='' ||
+    dniInput.value ==='' || birthdateInput.value ==='' ||
     phoneInput.value ==='' || addressInput.value ==='' ||
     cityInput.value ==='' || postalCodeInput.value ==='' ||
     emailInput.value ===''|| passwordInput.value ==='' ||
@@ -316,18 +376,18 @@ btnRegister.addEventListener('click', function(){
         alert('some of the inputs are incomplete')
     }else{
         if (nameInput.classList.contains('red-border')|| lastNameInput.classList.contains('red-border') ||
-        dniInput.classList.contains('red-border') || birthdayInput.classList.contains('red-border') ||
+        dniInput.classList.contains('red-border') || birthdateInput.classList.contains('red-border') ||
         phoneInput.classList.contains('red-border') || addressInput.classList.contains('red-border') ||
         cityInput.classList.contains('red-border') || postalCodeInput.classList.contains('red-border') ||
         emailInput.classList.contains('red-border') || passwordInput.classList.contains('red-border') ||
-        repeatPassInput.classList.contains('ered-border')){
+        repeatPassInput.classList.contains('red-border')){
             alert('some of the inpust are incorrect');
         }else{
             alert(
                 'Name: ' + nameInput.value + '\n' + 
                 'Last name: ' + lastNameInput.value + '\n' + 
                 'Dni: ' + dniInput.value + '\n' + 
-                'Birth date: ' + birthdayInput.value + '\n' + 
+                'Birth date: ' + birthdateInput.value + '\n' + 
                 'Telephone number: ' + phoneInput.value + '\n' + 
                 'Address: ' + addressInput.value + '\n' + 
                 'Location: ' + cityInput.value + '\n' + 
@@ -339,44 +399,3 @@ btnRegister.addEventListener('click', function(){
         }
     }
 });
-
-
-function hasLetterAndNumber(inputValue){
-    var numbers = false;
-    var letters = false;
-    for (i = 0; i < inputValue.value.length; i++) {
-        var char = inputValue.value.charCodeAt(i);
-        if (char >= 48 && char <= 57) {
-        numbers = true;
-        } else if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
-        letters = true;
-    }}
-    if (!numbers || !letters) {
-        isValid = false;
-    }else{
-        isValid = true;
-    }
-}
-
-function hasLetter(inputValue){
-    var letters = false;
-    for (i = 0; i < inputValue.value.length; i++){
-        var char = inputValue.value.charCodeAt(i);
-        if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
-            letters = true;
-        }else{
-            letters = false;
-        }
-}}
-
-function hasNumber(inputValue) {
-    var char = inputValue.value;
-    for (i = 0; i < char.length; i++) {
-      var charCode = char.charCodeAt(i);
-      if (charCode >= 48 && charCode <= 57) {
-        return true;
-      }
-    }
-    return false;
-  }
-

@@ -53,6 +53,7 @@ button a:link, button a:visited, button a:active {
 }
 .error{
     color:red;
+    height:50px;
 }
 .red-border{
     border:1px red solid;
