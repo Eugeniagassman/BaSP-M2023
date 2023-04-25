@@ -22,7 +22,7 @@
         <div class="header">
             <h2>Mega Rocket</h2>
             <!-- <div id="header-social">
-                <!-- <a href="https://www.linkedin.com" target="_blank">
+                <a href="https://www.linkedin.com" target="_blank">
                     <img src="../../assets/img/logo-linkedin.png" alt="Linkedin logo">
                 </a>
                 <a href="https://twitter.com" target="_blank">
@@ -67,18 +67,23 @@
             <div id="fomr-rigth">
                 <label id="label-city-su" for="city-su">City</label>
                 <input id="city-su" placeholder="City">
+                <div id="city-error" class="error"></div>
                 <label id="label-postal-su" for="postal-code-su">Postal Code</label>
-                <input id="postal-code-su" type="text">
+                <input id="postal-code-su" type="text" placeholder="Postal Code">
+                <div id="postal-code-error" class="error"></div>
                 <label id="label-email-su" for="email-su">Email</label>
                 <input id="email-su" type="text" placeholder="email@email.com">
+                <div id="email-error" class="error"></div>
                 <label id="label-password-su" for="password-su">Password</label>
-                <input id="password-su" type="text" placeholder="Password">
-                <label id="label-repeat-pass-su" for="repeat-pass-su">Repeat password</label>
-                <input id="repeat-pass-su" type="text" placeholder="Repeat Password">
+                <input id="password-su" type="password" placeholder="Password">
+                <div id="password-error" class="error"></div>
+                <label id="label-repeat-pass-su" for="repeat-p-su">Repeat password</label>
+                <input id="repeat-p-su" type="password" placeholder="Repeat Password">
+                <div id="repeat-p-error" class="error"></div>
             </div>
         </form>
         <button id="btn-home" class="btn-sign-up"><a href="index.html">Home</a></button>
-        <button id="btn-sign-up" class="btn-sign-up"><a href="#">Sign Up</a></button>
+        <button id="btn-register" class="btn-sign-up"><a href="#">Register</a></button>
         <button class="btn-sign-up"><a href="login.html">Login</a></button>
     </main>
     <footer id="footer" class="txt-dark">

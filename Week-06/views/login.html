@@ -45,14 +45,16 @@
         <form id="form-login">
             <label id="label-email-login" for="email-login">Email</label>
             <input id="email-login" type="text" placeholder="Email@email.com">
+            <div id="email-error" class="error"></div>
             <label id="label-password-login" for="password-login">Password</label>
-            <input id="password-login" placeholder="Password">
+            <input id="password-login" type="password" placeholder="Password">
+            <div id="password-error" class="error"></div>
         </form>
         <div id="">
             <p><a href="sign-up.html">Create a partner account</a></p>
         </div>
         <button class="btn-login"><a href="index.html">Home</a></button>
-        <button class="btn-login"><a href="#">Sign In</a></button>
+        <button id="btn-si" class="btn-login"><a href="#">Sign In</a></button>
 
     </main>
     <footer id="footer" class="txt-dark">
