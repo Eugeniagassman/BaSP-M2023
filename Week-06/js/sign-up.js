@@ -1,10 +1,12 @@
 function addClassRed(inputValue){
     inputValue.classList.add('red-border');
 }
+
 function removeClassRed(inputValue){
     inputValue.classList.remove('red-border');
     
 }
+
 //---NAME---
 var nameInput = document.getElementById('name-su');
 nameInput.addEventListener('blur',function(){
@@ -86,6 +88,7 @@ dniInput.addEventListener('blur',function(){
         }
     }
 });
+
 dniInput.addEventListener('focus',function(){
     removeClassRed(dniInput);
     document.getElementById('dni-error').innerText='';
@@ -112,6 +115,7 @@ birthdateInput.addEventListener('blur', function(){
         }
     }
 });
+
 birthdateInput.addEventListener('focus',function(){
     removeClassRed(birthdateInput);
     document.getElementById('birthdate-error').innerText='';
@@ -142,6 +146,7 @@ phoneInput.addEventListener('blur',function(){
         }
     }
 );
+
 phoneInput.addEventListener('focus',function(){
     removeClassRed(phoneInput);
     document.getElementById('phone-error').innerText='';
@@ -256,6 +261,7 @@ postalCodeInput.addEventListener('blur',function(){
         }
     }
 });
+
 postalCodeInput.addEventListener('focus',function(){
     removeClassRed(postalCodeInput);
     document.getElementById('postal-code-error').innerText='';
@@ -318,6 +324,7 @@ passwordInput.addEventListener('blur',function(){
 
     }
 });
+
 passwordInput.addEventListener('focus',function(){
     removeClassRed(passwordInput);
     document.getElementById('password-error').innerText='';
@@ -358,11 +365,11 @@ repeatPassInput.addEventListener('blur',function(){
 
     }
 });
+
 repeatPassInput.addEventListener('focus',function(){
     removeClassRed(repeatPassInput);
     document.getElementById('repeat-p-error').innerText='';
 });
-
 
 //---REGISTER---
 var btnRegister = document.getElementById('btn-register');
