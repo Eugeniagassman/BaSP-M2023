@@ -1,0 +1,102 @@
+body{
+    margin-left:3%;
+    margin-right: 3%;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(55,56,103,100%);
+    font-weight: 500;
+    text-align: center;
+}
+header{
+    border-bottom:5px rgb(170, 206, 155) solid;
+    padding: 1%;
+}
+main h1{
+    font-size: 1.5em;
+    margin: 2%;
+}
+#mega-rocket{
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin: 3%;
+}
+a{
+    text-decoration: none;
+}
+form label{
+    display: block;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    text-align: left;
+}
+form input{
+    width: 90%;
+    padding: 3%;
+    border: 1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 4px;
+    margin-bottom: 2%;
+}
+button a:link, button a:visited, button a:active {
+    text-decoration: none;
+    color:rgb(55,56,103,100%);
+}
+.btn-sign-up{
+    width: 30%;
+    padding: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgba(55, 56, 103, 100%) solid;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.error{
+    color:red;
+    height:50px;
+}
+.red-border{
+    border:1px red solid;
+}
+.none{
+    display:none;
+}
+@media only screen and (min-width: 1024px) {
+    body{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    header{
+        margin-left: 0;
+    }
+    #form-sign-up{
+        display:flex;
+        justify-content: space-around;
+        border:1px rgba(55, 56, 103, 100%) solid;
+        padding: 2%;
+        box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.16);
+        border-radius: 5px;
+    }
+    form input{
+        width: 355px;
+        padding: 5%;
+    }
+    .btn-sign-up{
+        width: 200px;
+        padding: 2%;
+        margin: 2%;
+    }
+    #footer{
+        height: 10%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    footer img{
+        height: 25px;
+    }
+}
