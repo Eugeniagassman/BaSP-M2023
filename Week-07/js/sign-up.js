@@ -111,6 +111,11 @@ birthdateInput.addEventListener('blur', function(){
             addClassRed(birthdateInput);
             isValid = false;
         }else{
+            var year = birthdateInput.value.substring(0, 4);
+            var month = birthdateInput.value.substring(5, 7);
+            var day = birthdateInput.value.substring(8, 10);
+            var date = [month, day, year];
+            dateMDY = date.join('/');
             isValid = true;
         }
     }
@@ -374,6 +379,7 @@ repeatPassInput.addEventListener('focus',function(){
 //---REGISTER---
 var btnRegister = document.getElementById('btn-register');
 btnRegister.addEventListener('click', function(){
+        
     if(nameInput.value ===''|| lastNameInput.value ===''||
     dniInput.value ==='' || birthdateInput.value ==='' ||
     phoneInput.value ==='' || addressInput.value ==='' ||
@@ -390,21 +396,83 @@ btnRegister.addEventListener('click', function(){
         repeatPassInput.classList.contains('red-border')){
             alert('some of the inpust are incorrect');
         }else{
-            
-        //     alert(
-        //         'Name: ' + nameInput.value + '\n' + 
-        //         'Last name: ' + lastNameInput.value + '\n' + 
-        //         'Dni: ' + dniInput.value + '\n' + 
-        //         'Birth date: ' + birthdateInput.value + '\n' + 
-        //         'Telephone number: ' + phoneInput.value + '\n' + 
-        //         'Address: ' + addressInput.value + '\n' + 
-        //         'Location: ' + cityInput.value + '\n' + 
-        //         'Postal code: ' + postalCodeInput.value + '\n' + 
-        //         'Email: ' + emailInput.value + '\n' + 
-        //         'Password: ' + passwordInput.value + '\n' + 
-        //         'Password repeat: ' + repeatPassInput.value);
-            
-        }
-    }
-});
+        var url = 'https://api-rest-server.vercel.app/signup?name=' +
+        nameInput.value + '&lastName=' + lastNameInput.value + 
+        '&dni=' + dniInput.value + '&dob=' + dateMDY +
+        '&phone=' + phoneInput.value + '&address=' + addressInput.value +
+        '&city=' + cityInput.value + '&zip=' + postalCodeInput.value +
+        '&email=' + emailInput.value + '&password=' + passwordInput.value;
+        console.log(url)
+        fetch(url)
+        .then(function(response){
+            console.log(response)
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data.data)
+            if (data.hasOwnProperty('data')) {
+                var keys = Object.keys(data.data);
+                for (var i = 1; i < keys.length; i++) {
+                    var key = keys[i];
+                    if (data.data.hasOwnProperty(key)) {
+                        var value = data.data[key];
+                        localStorage.setItem(key, value);
+                        console.log(key + ': ' + value);
+                    }
+                }
+            } else if (data.hasOwnProperty('errors')) {
+                console.log(data.errors)
+                for (var i = 0; i < data.errors.length; i++) {
+                    var error = data.errors[i];
+                    if (error.hasOwnProperty('msg')) {
+                       console.log(error.msg);
+                    }
+                }
+            }
+        })
+        .catch(function () {
+            alert('ERROR: Server or route error.');
+        });
+}}})
 
+
+document.addEventListener("DOMContentLoaded", showLocalStorage);
+
+function showLocalStorage() {
+nameInput.value = localStorage.getItem('name');
+lastNameInput.value = localStorage.getItem('lastName');
+addressInput.value = localStorage.getItem('address');
+postalCodeInput.value = localStorage.getItem('zip');
+dateMDY = localStorage.getItem('dob');
+phoneInput.value = localStorage.getItem('phone');
+dniInput.value = localStorage.getItem('dni');
+cityInput.value = localStorage.getItem('city');
+emailInput.value = localStorage.getItem('email');
+passwordInput.value = localStorage.getItem('password');
+repeatPassInput.value = localStorage.getItem('password');
+
+}
+// function validateBorder(){
+//     if (nameInput.classList.contains('red-border')|| lastNameInput.classList.contains('red-border') ||
+//     dniInput.classList.contains('red-border') || birthdateInput.classList.contains('red-border') ||
+//     phoneInput.classList.contains('red-border') || addressInput.classList.contains('red-border') ||
+//     cityInput.classList.contains('red-border') || postalCodeInput.classList.contains('red-border') ||
+//     emailInput.classList.contains('red-border') || passwordInput.classList.contains('red-border') ||
+//     repeatPassInput.classList.contains('red-border')){
+//         alert('some of the inpust are incorrect');  
+//         return true
+//     }else{
+//         return false;
+//     }
+// }function validateEmpty(){
+//     if(nameInput.value ===''|| lastNameInput.value ===''||
+//         dniInput.value ==='' || dateMDY ==='' ||
+//         phoneInput.value ==='' || addressInput.value ==='' ||
+//         cityInput.value ==='' || postalCodeInput.value ==='' ||
+//         emailInput.value ===''|| passwordInput.value ==='' ||
+//         repeatPassInput.value ===''){
+//             alert('some of the inputs are incomplete')
+//             return true;
+//     }else{
+//         return false;
+// }};
