@@ -7,26 +7,49 @@ function removeClassRed(inputValue){
     
 }
 
-//---NAME---
 var nameInput = document.getElementById('name-su');
+var lastNameInput = document.getElementById('last-name');
+var dniInput = document.getElementById('dni-su');
+var birthdateInput = document.getElementById('birthdate-su');
+var phoneInput = document.getElementById('phone-number');
+var addressInput = document.getElementById('address-su');
+var cityInput = document.getElementById('city-su');
+var postalCodeInput = document.getElementById('postal-code-su');
+var emailInput = document.getElementById('email-su');
+var passwordInput = document.getElementById('password-su');
+var repeatPassInput = document.getElementById('repeat-p-su');
+var btnRegister = document.getElementById('btn-register');
+
+var validName = true;
+var validLastName = true;
+var validDni = true;
+var validDob = true;
+var validPhone = true;
+var validAddress = true;
+var validCity = true;
+var validPC = true;
+var validEmail = true;
+var validPass = true;
+var validRePass = true;
+
 nameInput.addEventListener('blur',function(){
-    var isText = true;
-    var textLength = true;
+    validName = true;
     if(nameInput.value === ''){
-        document.getElementById('name-error').innerText ='Must complete the field with your name';
+        document.getElementById('name-error').innerText = 'Must complete with your name.';
         addClassRed(nameInput);
+        validName = false;
     }
     for (var i = 0; i < nameInput.value.length; i++) {
-      var char = nameInput.value.charCodeAt(i);
-      if ((char < 65 || char > 90) && (char < 97 || char > 122)) {
-        isText = false;
-        document.getElementById('name-error').innerText ='Must contain only letters';
-        addClassRed(nameInput);
-      }else if(nameInput.value.length < 3 ){
-        textLength = false;
-        document.getElementById('name-error').innerText ='Must have al least three letters';
-        addClassRed(nameInput);
-      }
+        var char = nameInput.value.charCodeAt(i);
+        if ((char < 65 || char > 90) && (char < 97 || char > 122)) {
+            document.getElementById('name-error').innerText = 'Letters only and must be more than 3 letters';
+            addClassRed(nameInput);
+            validName = false;
+        }else if(nameInput.value.length < 3 ){
+            document.getElementById('name-error').innerText = 'Letters only and must be more than 3 letters';
+            addClassRed(nameInput);
+            validName = false;
+        }
     }
 });
 
@@ -35,26 +58,24 @@ nameInput.addEventListener('focus',function(){
     document.getElementById('name-error').innerText='';
 });
 
-//---LAST NAME---
-var lastNameInput = document.getElementById('last-name');
 lastNameInput.addEventListener('blur',function(){
-    var isText = true;
-    var textLength = true;
+    validLastName = true;
     if(lastNameInput.value === ''){
         document.getElementById('last-name-error').innerText ='Must complete the field with your name';
         addClassRed(lastNameInput);
+        validLastName = false;
     }
     for (var i = 0; i < lastNameInput.value.length; i++) {
-      var char = lastNameInput.value.charCodeAt(i);
-      if ((char < 65 || char > 90) && (char < 97 || char > 122)) {
-        isText = false;
-        document.getElementById('last-name-error').innerText ='Must contain only letters';
-        addClassRed(lastNameInput);
-      }else if(lastNameInput.value.length < 3 ){
-        textLength = false;
-        document.getElementById('last-name-error').innerText ='Must have al least three letters';
-        addClassRed(lastNameInput);
-      }
+        var char = lastNameInput.value.charCodeAt(i);
+        if ((char < 65 || char > 90) && (char < 97 || char > 122)) {
+            document.getElementById('last-name-error').innerText ='Must contain only letters';
+            addClassRed(lastNameInput);
+            validLastName = false;
+        }else if(lastNameInput.value.length < 3 ){
+            document.getElementById('last-name-error').innerText ='Must have al least three letters';
+            addClassRed(lastNameInput);
+            validLastName = false;
+        }
     }
 });
 
@@ -63,30 +84,29 @@ lastNameInput.addEventListener('focus',function(){
     document.getElementById('last-name-error').innerText='';
 });
 
-//---DNI---
-var dniInput = document.getElementById('dni-su');
 dniInput.addEventListener('blur',function(){
+    validDni = true;
     if(dniInput.value === ''){
         document.getElementById('dni-error').innerText ='Must complete the field with your DNI';
         addClassRed(dniInput);
-        isValid = false;
-    } else{
-        for (i = 0; i < dniInput.value.length; i++) {
-            var char = dniInput.value.charCodeAt(i);
-            if (char >= 48 && char <= 57) {
-            isValid = true;
-            }else{
-                document.getElementById('dni-error').innerText ='Must be only numbers';
-                addClassRed(dniInput);
-                isValid = false;
-            }
-        }
-        if(dniInput.value.length <7){
-        document.getElementById('dni-error').innerText = 'Must have seven numbers';
-        addClassRed(dniInput);
-        isValid = false;
+        validDni =false;
+    }
+    for (i = 0; i < dniInput.value.length; i++) {
+        var char = dniInput.value.charCodeAt(i);
+        if (char >= 48 && char <= 57) {
+            validDni =false;
+        }else{
+            document.getElementById('dni-error').innerText ='Must be only numbers';
+            addClassRed(dniInput);
+            validDni =false;
         }
     }
+    if(dniInput.value.length <7){
+        document.getElementById('dni-error').innerText = 'Must have seven numbers';
+        addClassRed(dniInput);
+        validDni =false;
+    }
+
 });
 
 dniInput.addEventListener('focus',function(){
@@ -94,29 +114,27 @@ dniInput.addEventListener('focus',function(){
     document.getElementById('dni-error').innerText='';
 });
 
-//---BIRTHDAY---
-var birthdateInput = document.getElementById('birthdate-su');
 birthdateInput.addEventListener('blur', function(){
+    validDob =true;
     if(birthdateInput.value === ''){
         document.getElementById('birthdate-error').innerText ='Must complete the field with your Birthdate';
         addClassRed(birthdateInput);
-        isValid = false;
+        validDob =false;
     }else{
         if(birthdateInput.value.substring(0,4) > 2017 ){
             document.getElementById('birthdate-error').innerText ='The gym can only enter over 6 years';
             addClassRed(birthdateInput);
-            isValid = false;
+            validDob =false;
         }else if(birthdateInput.value.substring(0,4) < 1933){
             document.getElementById('birthdate-error').innerText ='Are you sure you are over 90 years old?';
             addClassRed(birthdateInput);
-            isValid = false;
+            validDob =false;
         }else{
             var year = birthdateInput.value.substring(0, 4);
             var month = birthdateInput.value.substring(5, 7);
             var day = birthdateInput.value.substring(8, 10);
             var date = [month, day, year];
             dateMDY = date.join('/');
-            isValid = true;
         }
     }
 });
@@ -126,28 +144,27 @@ birthdateInput.addEventListener('focus',function(){
     document.getElementById('birthdate-error').innerText='';
 });
 
-//---PHONE NUMBER---
-var phoneInput = document.getElementById('phone-number');
 phoneInput.addEventListener('blur',function(){
+    validPhone =true;
     if(phoneInput.value === ''){
         document.getElementById('phone-error').innerText ='Must complete the field with your Phone Number';
         addClassRed(phoneInput);
-        isValid = false;
+        validPhone = false;
     }else{
         for (i = 0; i < phoneInput.value.length; i++) {
             var char = phoneInput.value.charCodeAt(i);
             if (char >= 48 && char <= 57) {
-            isValid = true;
+                validPhone = false;
             }else{
                 document.getElementById('phone-error').innerText ='Must be only numbers';
                 addClassRed(phoneInput);
-                isValid = false;
+                validPhone = false;
             }
         }
         } if(phoneInput.value.length != 10){
             document.getElementById('phone-error').innerText = 'Must have ten numbers';
             addClassRed(phoneInput);
-            isValid = false;
+            validPhone = false;
         }
     }
 );
@@ -157,12 +174,12 @@ phoneInput.addEventListener('focus',function(){
     document.getElementById('phone-error').innerText='';
 });
 
-//---ADDRESS---
-var addressInput = document.getElementById('address-su');
 addressInput.addEventListener('blur',function(){
+    validAddress = true;
     if(addressInput.value === ''){
-        document.getElementById('address-error').innerText ='Must complete the field with your Adrres';
+        document.getElementById('address-error').innerText ='Must complete the field with your Adrress';
         addClassRed(addressInput);
+        validAddress = false;
     }
     else{
         var numbers = false;
@@ -170,9 +187,9 @@ addressInput.addEventListener('blur',function(){
         for (i = 0; i < addressInput.value.length; i++) {
             var char = addressInput.value.charCodeAt(i);
             if (char >= 48 && char <= 57) {
-            numbers = true;
+                numbers = true;
             } else if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
-            letters = true;
+                letters = true;
             }
         }
         var spaceAtFirst = false;
@@ -194,43 +211,39 @@ addressInput.addEventListener('blur',function(){
             document.getElementById('address-error').innerText = 
             'Must have At least 5 characters with letters, numbers and a space in between.';
             addClassRed(addressInput);
-            isValid = false;
-        }else{
-            isValid = true;
-            }
+            validAddress = false;
+        }
     }
 });
-        
+
 addressInput.addEventListener('focus',function(){
     removeClassRed(addressInput);
     document.getElementById('address-error').innerText='';
 });
 
-//---CITY---
-var cityInput = document.getElementById('city-su');
 cityInput.addEventListener('blur',function(){
+    validCity = true;
     if(cityInput.value === ''){
         document.getElementById('city-error').innerText ='Must complete the field with your city';
         addClassRed(cityInput);
+        validCity = true;
     }else{
         var numbers = false;
         var letters = false;
         for (i = 0; i < addressInput.value.length; i++) {
             var char = addressInput.value.charCodeAt(i);
             if (char >= 48 && char <= 57) {
-            numbers = true;
+                numbers = true;
             } else if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
-            letters = true;
+                letters = true;
             }
         }
         if ((!numbers || numbers) && ( letters || !letters) && cityInput.value.length < 5) {
             document.getElementById('city-error').innerText = 
             'Must have At least 5 characters with letters or numbers';
             addClassRed(addressInput);
-            isValid = false;
-        }else{
-            isValid = true;
-            }
+            validCity = true;
+        }
     }
 });
 
@@ -239,22 +252,21 @@ cityInput.addEventListener('focus',function(){
     document.getElementById('city-error').innerText='';
 });
 
-//---POSTAL CODE---
-var postalCodeInput = document.getElementById('postal-code-su');
 postalCodeInput.addEventListener('blur',function(){
+    validPC = true;
     if(postalCodeInput.value === ''){
         document.getElementById('postal-code-error').innerText ='Must complete the field with your Postal Number';
         addClassRed(postalCodeInput);
-        isValid = false;
+        validPC = false;
     }else{
         for (i = 0; i < postalCodeInput.value.length; i++) {
             var char = postalCodeInput.value.charCodeAt(i);
             if (char >= 48 && char <= 57) {
-            isValid = true;
+                isValid = true;
             }else{
                 document.getElementById('postal-code-error').innerText ='Must be only numbers';
                 addClassRed(postalCodeInput);
-                isValid = false;
+                validPC = false;
             }
         }
         if(postalCodeInput.value.length >= 4 && postalCodeInput.value.length <= 5){
@@ -262,7 +274,7 @@ postalCodeInput.addEventListener('blur',function(){
         }else{
             document.getElementById('postal-code-error').innerText = 'Must be between 4 and 5 numbers';
             addClassRed(postalCodeInput);
-            isValid = false;
+            validPC = false;
         }
     }
 });
@@ -272,20 +284,19 @@ postalCodeInput.addEventListener('focus',function(){
     document.getElementById('postal-code-error').innerText='';
 });
 
-//---EMAIL---
-var emailInput = document.getElementById('email-su');
 emailInput.addEventListener('blur',function(){
+    validEmail = true;
     var emailExpression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(emailInput.value === ''){
         document.getElementById('email-error').innerText ='Must complete the field with your email';
         addClassRed(emailInput);
-        isValid = false;
+        validEmail = false;
     }else if(emailExpression.test(emailInput.value)){
-        isValid = true;
+        return true;
     }else{
         document.getElementById('email-error').innerText ='Must complete the field with your email';
         addClassRed(emailInput);
-        isValid = false;
+        validEmail = false;
     }
 });
 
@@ -294,39 +305,35 @@ emailInput.addEventListener('focus',function(){
     document.getElementById('email-error').innerText='';
 });
 
-//---PASSWORD---
-var passwordInput = document.getElementById('password-su');
 passwordInput.addEventListener('blur',function(){
+    validPass = true;
     if(passwordInput.value === ''){
         document.getElementById('password-error').innerText ='Must complete the field with your Password';
         addClassRed(passwordInput);
-        isValid = false;
+        validPass = false;
     }else{
         if(passwordInput.value.length < 8){
             document.getElementById('password-error').innerText = 
             'At least 8 characters, made up of letters and numbers.';
             addClassRed(passwordInput);
-            isValid = false;
+            validPass = false;
         }else{
             var numbers = false;
             var letters = false;
             for (i = 0; i < passwordInput.value.length; i++) {
                 var char = passwordInput.value.charCodeAt(i);
                 if (char >= 48 && char <= 57) {
-                numbers = true;
+                    numbers = true;
                 } else if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
-                letters = true;
+                    letters = true;
             }}
             if (!numbers || !letters) {
                 document.getElementById('password-error').innerText = 
                 'At least 8 characters, made up of letters and numbers.';
                 addClassRed(passwordInput);
-                isValid = false;
-            }else{
-                isValid = true;
+                validPass = false;
             }
         }
-
     }
 });
 
@@ -335,39 +342,20 @@ passwordInput.addEventListener('focus',function(){
     document.getElementById('password-error').innerText='';
 });
 
-//---REPEAT PASSWORD---
-var repeatPassInput = document.getElementById('repeat-p-su');
 repeatPassInput.addEventListener('blur',function(){
+    validRePass = true;
     if(repeatPassInput.value === ''){
         document.getElementById('repeat-p-error').innerText ='Must complete the field with your Password';
         addClassRed(repeatPassInput);
-        isValid = false;
+        validRePass = false;
     }else{
-        if(repeatPassInput.value.length < 8){
-            document.getElementById('repeat-p-error').innerText = 
-            'At least 8 characters, made up of letters and numbers.';
-            addClassRed(repeatPassInput);
-            isValid = false;
+        if(repeatPassInput.value === passwordInput){
+            validRePass = true;
         }else{
-            var numbers = false;
-            var letters = false;
-            for (let i = 0; i < repeatPassInput.value.length; i++) {
-                var char = repeatPassInput.value.charCodeAt(i);
-                if (char >= 48 && char <= 57) {
-                numbers = true;
-                } else if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
-                letters = true;
-            }}
-            if (!numbers || !letters) {
-                document.getElementById('repeat-p-error').innerText = 
-                'At least 8 characters, made up of letters and numbers.';
-                addClassRed(repeatPassInput);
-                isValid = false;
-            }else{
-                isValid = true;
-            }
+            document.getElementById('repeat-p-error').innerText ='Must repeat your Password';
+            addClassRed(repeatPassInput);
+            validRePass = false;
         }
-
     }
 });
 
@@ -376,10 +364,7 @@ repeatPassInput.addEventListener('focus',function(){
     document.getElementById('repeat-p-error').innerText='';
 });
 
-//---REGISTER---
-var btnRegister = document.getElementById('btn-register');
 btnRegister.addEventListener('click', function(){
-        
     if(nameInput.value ===''|| lastNameInput.value ===''||
     dniInput.value ==='' || birthdateInput.value ==='' ||
     phoneInput.value ==='' || addressInput.value ==='' ||
@@ -387,29 +372,29 @@ btnRegister.addEventListener('click', function(){
     emailInput.value ===''|| passwordInput.value ==='' ||
     repeatPassInput.value ===''){
         alert('some of the inputs are incomplete')
+    }
+    if ( !validName  || !validLastName ||
+        !validPhone  ||  !validDob||
+        !validPhone || !validAddress ||
+        !validCity  || !validPC ||
+        !validEmail  || !validPass ||
+        !validRePass ){
+            alert('some of the imputs are incorrect');
     }else{
-        if (nameInput.classList.contains('red-border')|| lastNameInput.classList.contains('red-border') ||
-        dniInput.classList.contains('red-border') || birthdateInput.classList.contains('red-border') ||
-        phoneInput.classList.contains('red-border') || addressInput.classList.contains('red-border') ||
-        cityInput.classList.contains('red-border') || postalCodeInput.classList.contains('red-border') ||
-        emailInput.classList.contains('red-border') || passwordInput.classList.contains('red-border') ||
-        repeatPassInput.classList.contains('red-border')){
-            alert('some of the inpust are incorrect');
-        }else{
+
         var url = 'https://api-rest-server.vercel.app/signup?name=' +
         nameInput.value + '&lastName=' + lastNameInput.value + 
         '&dni=' + dniInput.value + '&dob=' + dateMDY +
         '&phone=' + phoneInput.value + '&address=' + addressInput.value +
         '&city=' + cityInput.value + '&zip=' + postalCodeInput.value +
         '&email=' + emailInput.value + '&password=' + passwordInput.value;
-        console.log(url)
+        
         fetch(url)
         .then(function(response){
-            console.log(response)
             return response.json()
         })
         .then(function (data) {
-            console.log(data.data)
+            var alertMsg = '';
             if (data.hasOwnProperty('data')) {
                 var keys = Object.keys(data.data);
                 for (var i = 1; i < keys.length; i++) {
@@ -417,7 +402,7 @@ btnRegister.addEventListener('click', function(){
                     if (data.data.hasOwnProperty(key)) {
                         var value = data.data[key];
                         localStorage.setItem(key, value);
-                        console.log(key + ': ' + value);
+                        alertMsg += key + ': ' + value + '\n';
                     }
                 }
             } else if (data.hasOwnProperty('errors')) {
@@ -425,19 +410,20 @@ btnRegister.addEventListener('click', function(){
                 for (var i = 0; i < data.errors.length; i++) {
                     var error = data.errors[i];
                     if (error.hasOwnProperty('msg')) {
-                       console.log(error.msg);
+                        alertMsg += error.msg + '\n';
                     }
                 }
             }
+            if(alertMsg !== ''){
+                alert(alertMsg);
+            }
         })
         .catch(function () {
-            alert('ERROR: Server or route error.');
+            console.log('error');
         });
-}}})
-
+}});
 
 document.addEventListener("DOMContentLoaded", showLocalStorage);
-
 function showLocalStorage() {
 nameInput.value = localStorage.getItem('name');
 lastNameInput.value = localStorage.getItem('lastName');
@@ -450,29 +436,4 @@ cityInput.value = localStorage.getItem('city');
 emailInput.value = localStorage.getItem('email');
 passwordInput.value = localStorage.getItem('password');
 repeatPassInput.value = localStorage.getItem('password');
-
 }
-// function validateBorder(){
-//     if (nameInput.classList.contains('red-border')|| lastNameInput.classList.contains('red-border') ||
-//     dniInput.classList.contains('red-border') || birthdateInput.classList.contains('red-border') ||
-//     phoneInput.classList.contains('red-border') || addressInput.classList.contains('red-border') ||
-//     cityInput.classList.contains('red-border') || postalCodeInput.classList.contains('red-border') ||
-//     emailInput.classList.contains('red-border') || passwordInput.classList.contains('red-border') ||
-//     repeatPassInput.classList.contains('red-border')){
-//         alert('some of the inpust are incorrect');  
-//         return true
-//     }else{
-//         return false;
-//     }
-// }function validateEmpty(){
-//     if(nameInput.value ===''|| lastNameInput.value ===''||
-//         dniInput.value ==='' || dateMDY ==='' ||
-//         phoneInput.value ==='' || addressInput.value ==='' ||
-//         cityInput.value ==='' || postalCodeInput.value ==='' ||
-//         emailInput.value ===''|| passwordInput.value ==='' ||
-//         repeatPassInput.value ===''){
-//             alert('some of the inputs are incomplete')
-//             return true;
-//     }else{
-//         return false;
-// }};
