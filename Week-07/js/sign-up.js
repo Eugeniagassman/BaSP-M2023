@@ -1,11 +1,3 @@
-function addClassRed(inputValue) {
-  inputValue.classList.add("red-border");
-}
-
-function removeClassRed(inputValue) {
-  inputValue.classList.remove("red-border");
-}
-
 var nameInput = document.getElementById("name-su");
 var lastNameInput = document.getElementById("last-name");
 var dniInput = document.getElementById("dni-su");
@@ -30,6 +22,14 @@ var validPC = true;
 var validEmail = true;
 var validPass = true;
 var validRePass = true;
+
+function addClassRed(inputValue) {
+  inputValue.classList.add("red-border");
+}
+
+function removeClassRed(inputValue) {
+  inputValue.classList.remove("red-border");
+}
 
 nameInput.addEventListener("blur", function () {
   validName = true;
@@ -375,7 +375,7 @@ repeatPassInput.addEventListener("blur", function () {
     addClassRed(repeatPassInput);
     validRePass = false;
   } else {
-    if (repeatPassInput.value === passwordInput) {
+    if (repeatPassInput.value === passwordInput.value) {
       validRePass = true;
     } else {
       document.getElementById("repeat-p-error").innerText =
